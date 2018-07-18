@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Toolbelt.AspNetCore.Blazor.Minimum.Template</id>
+    <version>1.0.0</version>
+    <description>
+      Templates for ASP.NET Core Blazor without any js and css libraries.
+    </description>
+    <authors>J.Sakamoto</authors>
+    <tags>aspnet templates blazor spa</tags>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file src="Content\**\*.*" target="Content" />
+  </files>
+</package>

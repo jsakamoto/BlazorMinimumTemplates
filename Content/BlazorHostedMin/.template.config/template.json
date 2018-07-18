@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "J.Sakamoto",
+    "classifications": [
+        "Web",
+        "Blazor",
+        "Hosted"
+    ],
+    "groupIdentity": "Toolbelt.Web.Blazor.Hosted.Minimum",
+    "identity": "Toolbelt.Web.Blazor.Hosted.Minimum.CSharp",
+    "name": "Blazor (hosted in ASP.NET server, minimum)",
+    "shortName": "blazorhostedmin",
+    "sourceName": "BlazorHostedMin",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    }
+}
