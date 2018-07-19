@@ -14,5 +14,76 @@
     "tags": {
         "language": "C#",
         "type": "project"
-    }
+    },
+    "symbols": {
+        "HostIdentifier": {
+            "type": "bind",
+            "binding": "HostIdentifier"
+        },
+        "skipRestore": {
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "If specified, skips the automatic restore of the project on create.",
+            "defaultValue": "false"
+        }
+    },
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "exclude": [
+                ".template.config/**"
+            ],
+            "modifiers": [
+                {
+                    "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+                    "exclude": [
+                        "*.sln"
+                    ]
+                }
+            ]
+        }
+    ],
+    "primaryOutputs": [
+        {
+            "path": "BlazorHostedMin.sln"
+        },
+        {
+            "condition": "(OS == \"Windows_NT\" && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+            "path": "BlazorHostedMin.Server\\BlazorHostedMin.Server.csproj"
+        },
+        {
+            "condition": "(OS != \"Windows_NT\" && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+            "path": "BlazorHostedMin.Server/BlazorHostedMin.Server.csproj"
+        },
+        {
+            "condition": "(OS == \"Windows_NT\" && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+            "path": "BlazorHostedMin.Client\\BlazorHostedMin.Client.csproj"
+        },
+        {
+            "condition": "(OS != \"Windows_NT\" && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+            "path": "BlazorHostedMin.Client/BlazorHostedMin.Client.csproj"
+        },
+        {
+            "condition": "(OS == \"Windows_NT\" && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+            "path": "BlazorHostedMin.Shared\\BlazorHostedMin.Shared.csproj"
+        },
+        {
+            "condition": "(OS != \"Windows_NT\" && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+            "path": "BlazorHostedMin.Shared/BlazorHostedMin.Shared.csproj"
+        }
+    ],
+    "postActions": [
+        {
+            "condition": "(!skipRestore)",
+            "description": "Restore NuGet packages required by this project.",
+            "manualInstructions": [
+                {
+                    "text": "Run 'dotnet restore'"
+                }
+            ],
+            "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+            "continueOnError": true
+        }
+    ]
 }

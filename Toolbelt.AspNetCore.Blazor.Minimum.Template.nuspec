@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Toolbelt.AspNetCore.Blazor.Minimum.Template</id>
-    <version>1.0.0</version>
+    <version>0.4.0.9</version>
     <description>
       Templates for ASP.NET Core Blazor without any js and css libraries.
     </description>
@@ -13,6 +13,6 @@
     </packageTypes>
   </metadata>
   <files>
-    <file src="Content\**\*.*" target="Content" />
+    <file src="Content\" target="Content" exclude="**\obj\**\*.*;**\bin\**\*.*;**\.vs\**\*.*;**\launchSettings.json;**\*.suo;**\*.user"/>
   </files>
 </package>
