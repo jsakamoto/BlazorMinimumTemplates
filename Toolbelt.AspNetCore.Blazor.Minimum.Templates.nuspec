@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
-    <id>Toolbelt.AspNetCore.Blazor.Minimum.Template</id>
-    <version>0.4.0.10</version>
+    <id>Toolbelt.AspNetCore.Blazor.Minimum.Templates</id>
+    <version>0.4.0.0</version>
     <description>
       Templates for ASP.NET Core Blazor without any js and css libraries.
     </description>
     <authors>J.Sakamoto</authors>
     <tags>aspnet templates blazor spa</tags>
+    <licenseUrl>https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jsakamoto/BlazorMinimumTemplates</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
