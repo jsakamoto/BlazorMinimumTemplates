@@ -42,7 +42,7 @@ namespace BlazorHostedMin.Server
                 routes.MapRoute(name: "default", template: "{controller}/{action}/{id?}");
             });
 
-            app.UseBlazor<Client.Program>();
+            app.UseBlazor<Client.Startup>();
         }
     }
 }
