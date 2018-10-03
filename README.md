@@ -16,7 +16,7 @@ When you run this project, the following will be displayed in a web browser.
 
 ## System requirement
 
-- .NET Core SDK ver.2.1 (2.1.300)
+- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) (2.1.402 or later)
 
 ## How to install
 
