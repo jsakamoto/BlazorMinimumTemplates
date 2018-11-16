@@ -8,11 +8,11 @@ This is project templates package for ASP.NET Core **"Blazor"** without JavaScri
 
 The Blazor application project, which is created by this template, contains only the minimum necessary files, like this.
 
-![fig.1](.assets/fig-001.png)
+![fig.1](https://github.com/jsakamoto/BlazorMinimumTemplates/raw/master/.assets/fig-001.png)
 
 When you run this project, the following page will be displayed in a web browser.
 
-![fig.2](.assets/fig-002.png)
+![fig.2](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/fig-002.png)
 
 ## System requirement
 
@@ -44,4 +44,4 @@ See also: ["dotnet new command - .NET Core CLI" | Microsoft Docs](https://docs.m
 
 ## License
 
-[The Unlicense](LICENSE)
+[The Unlicense](https://github.com/jsakamoto/BlazorMinimumTemplates/blob/master/LICENSE)
