@@ -2,21 +2,21 @@
 
 ## Summary
 
-This is project templates package for ASP.NET Core **"Blazor"** without any js and css libraries, designed for dotnet CLI.
+This is project templates package for ASP.NET Core **"Blazor"** without JavaScript and CSS libraries, designed for dotnet CLI.
 
 > Blazor is an experimental .NET web framework using **C#** and HTML that **runs in the browser**. [Learn More...](https://blazor.net/)
 
-The Blazor application project created from this template contains only the minimum necessary files, like this.
+The Blazor application project, which is created by this template, contains only the minimum necessary files, like this.
 
 ![fig.1](.assets/fig-001.png)
 
-When you run this project, the following will be displayed in a web browser.
+When you run this project, the following page will be displayed in a web browser.
 
 ![fig.2](.assets/fig-002.png)
 
 ## System requirement
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) (2.1.402 or later)
+- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) (2.1.500 or later)
 
 ## How to install
 
