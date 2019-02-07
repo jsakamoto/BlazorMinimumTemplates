@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) (2.1.500 or later)
+- [.NET Core 3.0 Preview 2 SDK (3.0.100-preview-010184)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::0.8.0-preview-19104-04
 ```
 
 ## How to use
@@ -40,7 +40,18 @@ If you want a ASP.NET Core hosted edition, use a short name of the template "**b
 
 These commands are create a new project in current directory, and the project name is same as the current directory name.
 
-See also: ["dotnet new command - .NET Core CLI" | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new?tabs=netcore21)
+See also: ["dotnet new command - .NET Core CLI" | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
+
+## Known issues
+
+There are a couple of known issues with this release that you may run into:
+
+- **"It was not possible to find any compatible framework version. The specified framework 'Microsoft.NETCore.App', version '2.0.0' was not found."**: You may see this error when building a Blazor app because the IL linker currently requires .NET Core 2.x to run. To work around this issue, either install .NET Core 2.2 or disable IL linking by setting the `<BlazorLinkOnBuild>false</BlazorLinkOnBuild>` property in your project file.
+- **"Unable to generate deps.json, it may have been already generated."**: You may see this error when running a standalone Blazor app and you haven't yet restored packages for any .NET Core apps. To workaround this issue create any .NET Core app (ex dotnet new console) and then rerun the Blazor app.
+
+## Upgrade to Blazor 0.8.0
+
+See also: **[ASP.NET Blog - Blazor 0.8.0 experimental release now available](https://blogs.msdn.microsoft.com/webdev/2019/02/05/blazor-0-8-0-experimental-release-now-available/)**
 
 ## License
 
