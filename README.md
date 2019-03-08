@@ -1,4 +1,4 @@
-# Blazor Minimum Project Templates [![NuGet Package](https://img.shields.io/nuget/v/Toolbelt.AspNetCore.Blazor.Minimum.Templates.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/)
+# Blazor Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v0.9.0-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/0.9.0-preview3-19154-02/)
 
 ## Summary
 
@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET Core 3.0 Preview 2 SDK (3.0.100-preview-010184)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [.NET Core 3.0 Preview 3 SDK (3.0.100-preview3-010431)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::0.8.0-preview-19104-04
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::0.9.0-preview3-19154-02
 ```
 
 ## How to use
@@ -48,6 +48,10 @@ There are a couple of known issues with this release that you may run into:
 
 - **"It was not possible to find any compatible framework version. The specified framework 'Microsoft.NETCore.App', version '2.0.0' was not found."**: You may see this error when building a Blazor app because the IL linker currently requires .NET Core 2.x to run. To work around this issue, either install .NET Core 2.2 or disable IL linking by setting the `<BlazorLinkOnBuild>false</BlazorLinkOnBuild>` property in your project file.
 - **"Unable to generate deps.json, it may have been already generated."**: You may see this error when running a standalone Blazor app and you haven't yet restored packages for any .NET Core apps. To workaround this issue create any .NET Core app (ex dotnet new console) and then rerun the Blazor app.
+
+## Upgrade to Blazor 0.9.0 from 0.8.0
+
+See also: **[Blazor 0.9.0 experimental release now available](https://devblogs.microsoft.com/aspnet/blazor-0-9-0-experimental-release-now-available/)**
 
 ## Upgrade to Blazor 0.8.0
 
