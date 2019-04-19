@@ -8,7 +8,7 @@
     ],
     "groupIdentity": "Toolbelt.Web.Blazor.Standalone.Minimum",
     "identity": "Toolbelt.Web.Blazor.Standalone.Minimum.CSharp",
-    "name": "Blazor (standalone, minimum)",
+    "name": "Blazor (client-side, minimum)",
     "shortName": "blazormin",
     "sourceName": "BlazorStandaloneMin",
     "tags": {

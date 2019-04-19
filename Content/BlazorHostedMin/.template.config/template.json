@@ -8,7 +8,7 @@
     ],
     "groupIdentity": "Toolbelt.Web.Blazor.Hosted.Minimum",
     "identity": "Toolbelt.Web.Blazor.Hosted.Minimum.CSharp",
-    "name": "Blazor (hosted in ASP.NET server, minimum)",
+    "name": "Blazor (ASP.NET Core hosted, minimum)",
     "shortName": "blazorhostedmin",
     "sourceName": "BlazorHostedMin",
     "tags": {
