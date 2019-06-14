@@ -1,8 +1,12 @@
 ﻿<!--
     If you want to enable Blazor routing, you should remove all of this contents,
-    and uncomment the below line. (See also: https://blazor.net/docs/routing.html )
+    and uncomment the below line. (See also: https://docs.microsoft.com/en-us/aspnet/core/blazor/routing )
 
-    <Router AppAssembly=typeof(Program).Assembly />
+<Router AppAssembly="typeof(Program).Assembly">
+    <NotFoundContent>
+        <p>Sorry, there's nothing at this address.</p>
+    </NotFoundContent>
+</Router>
 -->
 
 <div style="text-align:center">
@@ -17,12 +21,12 @@
         <h2><a target="_blank" href="https://blazor.net">Blazor docs website</a></h2>
     </li>
     <li>
-        <h2><a target="_blank" href="https://learn-blazor.com/">LEARN BLAZOR</a></h2>
+        <h2><a target="_blank" href="https://github.com/AdrienTorris/awesome-blazor#awesome-blazor-">Awesome Blazor</a></h2>
     </li>
     <li>
         <h2>
             Please take our
-            <a target="_blank" class="alert-link" href="https://go.microsoft.com/fwlink/?linkid=2086020">
+            <a target="_blank" class="alert-link" href="https://go.microsoft.com/fwlink/?linkid=2093904">
                 brief survey
             </a>
             and tell us what you think.
@@ -30,6 +34,6 @@
     </li>
 </ul>
 
-@functions {
+@code {
     string Title = "Blazor";
 }

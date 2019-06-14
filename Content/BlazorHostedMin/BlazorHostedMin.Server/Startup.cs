@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,14 +33,15 @@ namespace BlazorHostedMin.Server
                 app.UseBlazorDebugging();
             }
 
+            app.UseClientSideBlazorFiles<Client.Startup>();
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
+                endpoints.MapFallbackToClientSideBlazor<Client.Startup>("index.html");
             });
-
-            app.UseBlazor<Client.Startup>();
         }
     }
 }
