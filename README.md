@@ -1,4 +1,4 @@
-# Blazor (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v3.0.0%20Preview%206-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/3.0.0-preview6.19307.2)
+# Blazor (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v3.0.0%20Preview%207-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/3.0.0-preview7.19365.7)
 
 ## Summary
 
@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET Core 3.0 Preview 6 SDK (3.0.100-preview6-012264)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [.NET Core 3.0 Preview 7 SDK (3.0.100-preview7-012821)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.0.0-preview6.19307.2
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.0.0-preview7.19365.7
 ```
 
 ## How to use
@@ -41,6 +41,10 @@ If you want a ASP.NET Core hosted edition, use a short name of the template "**b
 These commands are create a new project in current directory, and the project name is same as the current directory name.
 
 See also: ["dotnet new command - .NET Core CLI" | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
+
+## Upgrade to Blazor 3.0 Preview 7 from Preview 6
+
+See also: [ASP.NET Core and Blazor updates in .NET Core 3.0 Preview 7](https://devblogs.microsoft.com/aspnet/asp-net-core-and-blazor-updates-in-net-core-3-0-preview-7/)
 
 ## Upgrade to Blazor 3.0 Preview 6 from Preview 4, 5
 
