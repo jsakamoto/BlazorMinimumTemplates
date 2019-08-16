@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
-namespace BlazorHostedMin.Server
+namespace BlazorWasmHostedMin.Server
 {
     public class Program
     {

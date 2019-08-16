@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
 
 #region
-namespace BlazorHostedMin.Shared { }
+namespace BlazorWasmHostedMin.Shared { }
 #endregion

@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Serialization;
 using System.Linq;
 
-namespace BlazorHostedMin.Server
+namespace BlazorWasmHostedMin.Server
 {
     public class Startup
     {

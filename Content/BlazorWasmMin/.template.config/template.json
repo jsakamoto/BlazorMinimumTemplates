@@ -4,13 +4,13 @@
     "classifications": [
         "Web",
         "Blazor",
-        "Standalone"
+        "WebAssembly"
     ],
-    "groupIdentity": "Toolbelt.Web.Blazor.Standalone.Minimum",
-    "identity": "Toolbelt.Web.Blazor.Standalone.Minimum.CSharp",
-    "name": "Blazor (client-side, minimum)",
-    "shortName": "blazormin",
-    "sourceName": "BlazorStandaloneMin",
+    "groupIdentity": "Toolbelt.Web.Blazor.Wasm.Minimum",
+    "identity": "Toolbelt.Web.Blazor.Wasm.Minimum.CSharp",
+    "name": "Blazor WebAssembly App (minimum)",
+    "shortName": "blazorwasmmin",
+    "sourceName": "BlazorWasmMin",
     "tags": {
         "language": "C#",
         "type": "project"
@@ -38,7 +38,7 @@
     ],
     "primaryOutputs": [
         {
-            "path": "BlazorStandaloneMin.csproj"
+            "path": "BlazorWasmMin.csproj"
         }
     ],
     "postActions": [

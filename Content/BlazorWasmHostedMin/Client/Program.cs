@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Blazor.Hosting;
 
-namespace BlazorHostedMin.Client
+namespace BlazorWasmHostedMin.Client
 {
     public class Program
     {
