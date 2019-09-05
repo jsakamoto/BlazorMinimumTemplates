@@ -2,10 +2,15 @@
     If you want to enable Blazor routing, you should remove all of this contents,
     and uncomment the below line. (See also: https://docs.microsoft.com/en-us/aspnet/core/blazor/routing )
 
-<Router AppAssembly="typeof(Program).Assembly">
-    <NotFoundContent>
-        <p>Sorry, there's nothing at this address.</p>
-    </NotFoundContent>
+<Router AppAssembly="@typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" />
+    </Found>
+    <NotFound>
+        <LayoutView>
+            <p>Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
 </Router>
 -->
 
@@ -26,7 +31,7 @@
     <li>
         <h2>
             Please take our
-            <a target="_blank" href="https://go.microsoft.com/fwlink/?linkid=2098127">
+            <a target="_blank" href="https://go.microsoft.com/fwlink/?linkid=2100553">
                 brief survey
             </a>
             and tell us what you think.
