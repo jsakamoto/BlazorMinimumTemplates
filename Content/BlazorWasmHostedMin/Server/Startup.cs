@@ -14,7 +14,7 @@ namespace BlazorWasmHostedMin.Server
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().AddNewtonsoftJson();
+            services.AddControllers();
             services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
@@ -40,7 +40,7 @@ namespace BlazorWasmHostedMin.Server
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllers();
                 endpoints.MapFallbackToClientSideBlazor<Client.Startup>("index.html");
             });
         }

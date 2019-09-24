@@ -1,10 +1,10 @@
-# Blazor WebAssembly App (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v3.0.0%20Preview%209-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/3.0.0-preview9.19457.4)
+# Blazor WebAssembly App (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v3.0.0%20Preview%209-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/3.0.0-preview9.19465.2)
 
 ## Summary
 
-This is project templates package for ASP.NET Core **"Blazor WebAssembly App"** without JavaScript and CSS libraries, designed for dotnet CLI.
+This is project templates package for ASP.NET Core **"Blazor WebAssembly App"** (a.k.a "client-side Blazor") without JavaScript and CSS libraries, designed for dotnet CLI.
 
-> Blazor WebAssembly is a .NET web framework using **C#** and HTML that **runs in the browser**. [Learn More...](https://blazor.net/)
+> Blazor WebAssembly (client-side Blazor) is a .NET web framework using **C#** and HTML that **runs in the browser**. [Learn More...](https://blazor.net/)
 
 The Blazor WebAssembly application project, which is created by this template, contains only the minimum necessary files, like this.
 
@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET Core 3.0 RC 1 SDK (3.0.100-rc1-014190)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [.NET Core 3.0 SDK (3.0.100)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.0.0-preview9.19457.4
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.0.0-preview9.19465.2
 ```
 
 ## How to use
