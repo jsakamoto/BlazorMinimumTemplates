@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Toolbelt.AspNetCore.Blazor.Minimum.Templates</id>
-    <version>3.0.0-preview9.19465.2</version>
+    <version>3.1.0-preview2.19528.8</version>
     <description>
       Templates for ASP.NET Core Blazor without any js and css libraries.
     </description>

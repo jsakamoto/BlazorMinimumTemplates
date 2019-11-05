@@ -1,4 +1,4 @@
-# Blazor WebAssembly App (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v3.0.0%20Preview%209-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/3.0.0-preview9.19465.2)
+# Blazor WebAssembly App (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v3.0.0%20Preview%209-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/3.1.0-preview2.19528.8)
 
 ## Summary
 
@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET Core 3.0 SDK (3.0.100)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [.NET Core 3.1 SDK Preview 2 (3.1.100-preview2-014569)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.0.0-preview9.19465.2
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.1.0-preview2.19528.8
 ```
 
 ## How to use
@@ -49,6 +49,10 @@ The project files contain "build" & "launch" task configuration for Visual Studi
 Therefore, enter the "dotnet new blazorwasmmin" command on the terminal, and after you open the workspace by Visual Studio Code, you can execute "Start Without Debugging" (Ctrl   F5) task immediately. 
 
 ## Appendix: Upgrading guide to the newer version of Blazor
+
+### Upgrade to Blazor 3.1 Preview 2
+
+See also: [ASP.NET Core updates in .NET Core 3.1 Preview 2](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1-preview-2/)
 
 ### Upgrade to Blazor 3.0 Preview 9 from Preview 8
 
