@@ -1,4 +1,4 @@
-# Blazor WebAssembly App (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v3.1.0%20Preview%202-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/3.1.0-preview2.19528.8.2)
+# Blazor WebAssembly App (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v3.1.0%20Preview%203-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/3.1.0-preview3.19555.2)
 
 ## Summary
 
@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET Core 3.1 SDK Preview 2 (3.1.100-preview2-014569)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 3.1 SDK Preview 3 (3.1.100-preview3-014645)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.1.0-preview2.19528.8.2
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.1.0-preview3.19555.2
 ```
 
 ## How to use
