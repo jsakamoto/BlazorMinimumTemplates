@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "BlazorWOL.Server": {
+    "BlazorWasmHostedMin.Server": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
