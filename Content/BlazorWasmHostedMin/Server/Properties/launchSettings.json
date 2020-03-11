@@ -18,10 +18,10 @@
     "BlazorWasmHostedMin.Server": {
       "commandName": "Project",
       "launchBrowser": true,
+      "applicationUrl": "http://localhost:57529/;https://localhost:57530/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "http://localhost:57529/;https://localhost:57530/"
+      }
     }
   }
 }
