@@ -1,4 +1,4 @@
-# Blazor WebAssembly App (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v3.2.0%20Preview%202-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/3.2.0-preview2.20160.5)
+# Blazor WebAssembly App (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v3.2.0%20Preview%203-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/3.2.0-preview3.20168.3)
 
 ## Summary
 
@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET Core 3.1 SDK (3.1.102)](https://dotnet.microsoft.com/download/dotnet-core/3.1) or later
+- [.NET Core 3.1 SDK (3.1.201)](https://dotnet.microsoft.com/download/dotnet-core/3.1) or later
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.2.0-preview2.20160.5
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.2.0-preview3.20168.3
 ```
 
 ## How to use
@@ -50,6 +50,10 @@ Therefore, enter the "dotnet new blazorwasmmin" command on the terminal, and aft
 
 ## Appendix: Upgrading guide to the newer version of Blazor
 
+### Upgrade to Blazor 3.2 Preview 3
+
+See also: [Blazor WebAssembly 3.2.0 Preview 3 release now available](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-preview-3-release-now-available/)
+
 ### Upgrade to Blazor 3.2 Preview 2
 
 See also: [Blazor WebAssembly 3.2.0 Preview 2 release now available](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-preview-2-release-now-available/)
@@ -57,42 +61,6 @@ See also: [Blazor WebAssembly 3.2.0 Preview 2 release now available](https://dev
 ### Upgrade to Blazor 3.2 Preview 1
 
 See also: [Blazor WebAssembly 3.2.0 Preview 1 release now available](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-preview-1-release-now-available/)
-
-### Upgrade to Blazor 3.1 Preview 4
-
-See also: [ASP.NET Core updates in .NET Core 3.1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1/)
-
-### Upgrade to Blazor 3.1 Preview 2
-
-See also: [ASP.NET Core updates in .NET Core 3.1 Preview 2](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1-preview-2/)
-
-### Upgrade to Blazor 3.0 Preview 9 from Preview 8
-
-See also: [ASP.NET Core and Blazor updates in .NET Core 3.0 Preview 9](https://devblogs.microsoft.com/aspnet/asp-net-core-and-blazor-updates-in-net-core-3-0-preview-9/)
-
-### Upgrade to Blazor 3.0 Preview 8 from Preview 7
-
-See also: [ASP.NET Core and Blazor updates in .NET Core 3.0 Preview 8](https://devblogs.microsoft.com/aspnet/asp-net-core-and-blazor-updates-in-net-core-3-0-preview-8/)
-
-### Upgrade to Blazor 3.0 Preview 7 from Preview 6
-
-See also: [ASP.NET Core and Blazor updates in .NET Core 3.0 Preview 7](https://devblogs.microsoft.com/aspnet/asp-net-core-and-blazor-updates-in-net-core-3-0-preview-7/)
-
-### Upgrade to Blazor 3.0 Preview 6 from Preview 4, 5
-
-See also: [ASP.NET Core and Blazor updates in .NET Core 3.0 Preview 6](https://devblogs.microsoft.com/aspnet/asp-net-core-and-blazor-updates-in-net-core-3-0-preview-6/)
-
-### Upgrade to Blazor 3.0 Preview 4 from 0.9.0
-
-See also: [Blazor now in official preview!](https://devblogs.microsoft.com/aspnet/blazor-now-in-official-preview/)
-
-### Upgrade to Blazor 0.9.0 from 0.8.0
-
-See also: [Blazor 0.9.0 experimental release now available](https://devblogs.microsoft.com/aspnet/blazor-0-9-0-experimental-release-now-available/)
-
-### Upgrade to Blazor 0.8.0
-
-See also: [ASP.NET Blog - Blazor 0.8.0 experimental release now available](https://blogs.msdn.microsoft.com/webdev/2019/02/05/blazor-0-8-0-experimental-release-now-available/)
 
 ## License
 
