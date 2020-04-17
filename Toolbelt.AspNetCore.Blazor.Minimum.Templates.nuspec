@@ -10,12 +10,13 @@
     <tags>aspnet templates blazor spa</tags>
     <license type="expression">Unlicense</license>
     <projectUrl>https://github.com/jsakamoto/BlazorMinimumTemplates</projectUrl>
-    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <icon>nupkg-icon.png</icon>
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
   </metadata>
   <files>
+    <file src=".assets\nupkg-icon.png" target="nupkg-icon.png" />
     <file src="Content\" target="Content" exclude="**\obj\**\*.*;**\bin\**\*.*;**\.vs\**\*.*;**\*.suo;**\*.user"/>
   </files>
 </package>
