@@ -1,4 +1,4 @@
-# Blazor WebAssembly App (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/badge/nuget-v3.2.0%20RC%201-orange.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/3.2.0-preview5.20216.8)
+# Blazor WebAssembly App (client-side) Minimum Project Templates [![NuGet Package](https://img.shields.io/nuget/v/Toolbelt.AspNetCore.Blazor.Minimum.Templates.svg)](https://www.nuget.org/packages/Toolbelt.AspNetCore.Blazor.Minimum.Templates/)
 
 ## Summary
 
@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET Core 3.1 SDK (3.1.201)](https://dotnet.microsoft.com/download/dotnet-core/3.1) or later
+- [.NET Core SDK (3.1.300 or later)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.2.0-rc1.20223.4
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.2.0
 ```
 
 ## How to use
@@ -50,6 +50,10 @@ Therefore, enter the "dotnet new blazorwasmmin" command on the terminal, and aft
 
 ## Appendix: Upgrading guide to the newer version of Blazor
 
+### Upgrade to Blazor 3.2 Release Candidate 1 to Officially Release
+
+See also: [Blazor WebAssembly 3.2.0 now available](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/)
+
 ### Upgrade to Blazor 3.2 Release Candidate 1
 
 See also: [Blazor WebAssembly 3.2.0 Release Candidate now available](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-release-candidate-now-available/)
@@ -61,10 +65,6 @@ See also: [Blazor WebAssembly 3.2.0 Preview 5 release now available](https://dev
 ### Upgrade to Blazor 3.2 Preview 4
 
 See also: [Blazor WebAssembly 3.2.0 Preview 4 release now available](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-preview-4-release-now-available/)
-
-### Upgrade to Blazor 3.2 Preview 3
-
-See also: [Blazor WebAssembly 3.2.0 Preview 3 release now available](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-preview-3-release-now-available/)
 
 ## License
 
