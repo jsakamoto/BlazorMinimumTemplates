@@ -21,7 +21,7 @@ When you run this project, the following page will be displayed in a web browser
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.2.0
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.2.1
 ```
 
 ## How to use
