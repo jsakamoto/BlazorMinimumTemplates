@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET Core SDK (3.1.300 or later)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET 5 SDK (5.0.100-preview.8 or later)](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::3.2.1
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::5.0.0-preview.8.20414.8
 ```
 
 ## How to use
@@ -46,25 +46,13 @@ See also: ["dotnet new command - .NET Core CLI" | Microsoft Docs](https://docs.m
 
 The project files contain "build" & "launch" task configuration for Visual Studio Code.
 
-Therefore, enter the "dotnet new blazorwasmmin" command on the terminal, and after you open the workspace by Visual Studio Code, you can execute "Start Without Debugging" (Ctrl   F5) task immediately. 
+Therefore, enter the "dotnet new blazorwasmmin" command on the terminal, and after you open the workspace by Visual Studio Code, you can execute "Start Without Debugging" (Ctrl + F5) task immediately. 
 
 ## Appendix: Upgrading guide to the newer version of Blazor
 
-### Upgrade to Blazor 3.2 Release Candidate 1 to Officially Release
+### Upgrade to Blazor 3.2 to .NET 5 Preview 8
 
-See also: [Blazor WebAssembly 3.2.0 now available](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/)
-
-### Upgrade to Blazor 3.2 Release Candidate 1
-
-See also: [Blazor WebAssembly 3.2.0 Release Candidate now available](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-release-candidate-now-available/)
-
-### Upgrade to Blazor 3.2 Preview 5
-
-See also: [Blazor WebAssembly 3.2.0 Preview 5 release now available](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-preview-5-release-now-available/)
-
-### Upgrade to Blazor 3.2 Preview 4
-
-See also: [Blazor WebAssembly 3.2.0 Preview 4 release now available](https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-preview-4-release-now-available/)
+See also: [ASP.NET Core updates in .NET 5 Preview 8](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-5-preview-8/)
 
 ## License
 
