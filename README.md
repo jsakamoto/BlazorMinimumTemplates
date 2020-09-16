@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET 5 SDK (5.0.100-preview.8 or later)](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [.NET 5 SDK (5.0.100-rc.1 or later)](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::5.0.0-preview.8.20414.8
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::5.0.0-rc.1.20451.17
 ```
 
 ## How to use
@@ -50,7 +50,11 @@ Therefore, enter the "dotnet new blazorwasmmin" command on the terminal, and aft
 
 ## Appendix: Upgrading guide to the newer version of Blazor
 
-### Upgrade to Blazor 3.2 to .NET 5 Preview 8
+### Upgrade .NET 5 Preview 8 to .NET 5 Release Candidate 1
+
+See also: [ASP.NET Core updates in .NET 5 Release Candidate 1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-5-release-candidate-1/)
+
+### Upgrade Blazor 3.2 to .NET 5 Preview 8
 
 See also: [ASP.NET Core updates in .NET 5 Preview 8](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-5-preview-8/)
 
