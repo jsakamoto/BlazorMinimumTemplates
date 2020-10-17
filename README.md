@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET 5 SDK (5.0.100-rc.1 or later)](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [.NET 5 SDK (5.0.100-rc.2 or later)](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::5.0.0-rc.1.20451.17
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::5.0.0-rc.2.20475.17
 ```
 
 ## How to use
@@ -49,6 +49,10 @@ The project files contain "build" & "launch" task configuration for Visual Studi
 Therefore, enter the "dotnet new blazorwasmmin" command on the terminal, and after you open the workspace by Visual Studio Code, you can execute "Start Without Debugging" (Ctrl + F5) task immediately. 
 
 ## Appendix: Upgrading guide to the newer version of Blazor
+
+### Upgrade .NET 5 Release Candidat 1 to .NET 5 Release Candidate 2
+
+See also: [ASP.NET Core updates in .NET 5 Release Candidate 2](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-5-release-candidate-2/)
 
 ### Upgrade .NET 5 Preview 8 to .NET 5 Release Candidate 1
 
