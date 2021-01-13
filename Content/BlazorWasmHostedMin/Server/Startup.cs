@@ -50,7 +50,7 @@ namespace BlazorWasmHostedMin.Server
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllers();
                 endpoints.MapFallbackToFile("index.html");
             });
         }
