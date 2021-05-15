@@ -16,12 +16,12 @@ When you run this project, the following page will be displayed in a web browser
 
 ## System requirement
 
-- [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::5.0.6
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::6.0.0-preview.3
 ```
 
 ## How to use
