@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Toolbelt.AspNetCore.Blazor.Minimum.Templates</id>
-    <version>5.0.4</version>
+    <version>5.0.6</version>
     <description>
       Templates for ASP.NET Core Blazor without any js and css libraries.
     </description>
@@ -11,6 +11,7 @@
     <license type="expression">Unlicense</license>
     <projectUrl>https://github.com/jsakamoto/BlazorMinimumTemplates</projectUrl>
     <icon>nupkg-icon.png</icon>
+    <readme>README.md</readme>
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
@@ -18,5 +19,6 @@
   <files>
     <file src=".assets\nupkg-icon.png" target="nupkg-icon.png" />
     <file src="Content\" target="Content" exclude="**\obj\**\*.*;**\bin\**\*.*;**\.vs\**\*.*;**\*.suo;**\*.user"/>
+    <file src="README.md" target="README.md" />
   </files>
 </package>

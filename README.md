@@ -8,7 +8,7 @@ This is project templates package for ASP.NET Core **"Blazor WebAssembly App"** 
 
 The Blazor WebAssembly application project, which is created by this template, contains only the minimum necessary files, like this.
 
-![fig.1](https://github.com/jsakamoto/BlazorMinimumTemplates/raw/master/.assets/fig-001.png)
+![fig.1](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/fig-001.png)
 
 When you run this project, the following page will be displayed in a web browser.
 
@@ -21,7 +21,7 @@ When you run this project, the following page will be displayed in a web browser
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::5.0.4
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::5.0.6
 ```
 
 ## How to use
