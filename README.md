@@ -21,7 +21,7 @@ When you run this project, the following page will be displayed in a web browser
 ## How to install
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::6.0.0-preview.3
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::6.0.0-preview.4
 ```
 
 ## How to use
@@ -47,20 +47,6 @@ See also: ["dotnet new command - .NET Core CLI" | Microsoft Docs](https://docs.m
 The project files contain "build" & "launch" task configuration for Visual Studio Code.
 
 Therefore, enter the "dotnet new blazorwasmmin" command on the terminal, and after you open the workspace by Visual Studio Code, you can execute "Start Without Debugging" (Ctrl + F5) task immediately. 
-
-## Appendix: Upgrading guide to the newer version of Blazor
-
-### Upgrade .NET 5 Release Candidat 1 to .NET 5 Release Candidate 2
-
-See also: [ASP.NET Core updates in .NET 5 Release Candidate 2](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-5-release-candidate-2/)
-
-### Upgrade .NET 5 Preview 8 to .NET 5 Release Candidate 1
-
-See also: [ASP.NET Core updates in .NET 5 Release Candidate 1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-5-release-candidate-1/)
-
-### Upgrade Blazor 3.2 to .NET 5 Preview 8
-
-See also: [ASP.NET Core updates in .NET 5 Preview 8](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-5-preview-8/)
 
 ## License
 

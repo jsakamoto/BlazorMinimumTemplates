@@ -24,6 +24,7 @@
             "args": [
                 "publish",
                 "${workspaceFolder}/BlazorWasmMin.csproj",
+                "/property:Configuration=Release",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -35,10 +36,8 @@
             "type": "process",
             "args": [
                 "watch",
-                "run",
-                "${workspaceFolder}/BlazorWasmMin.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "--project",
+                "${workspaceFolder}/BlazorWasmMin.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
