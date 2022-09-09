@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0.0",
+  "strings": {
+    "name": "Blazor WebAssembly アプリ (空) rev.4",
+    "description": "js および css ライブラリを一切含まない、空の Blazor WebAssembly アプリを作成するためのプロジェクト テンプレート。",
+    "parameter.Hosted.name": "ASP.NET Core でホストされた(_h)"
+  }
+}

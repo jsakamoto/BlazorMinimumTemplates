@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/vs-2017.3.host",
+  "order": 900,
+  "icon": "icon.png",
+  "symbolInfo": [
+    {
+      "id": "Hosted",
+      "name": {
+        "text": "ASP.NET Core _hosted"
+      },
+      "isVisible": true
+    }
+  ]
+}
