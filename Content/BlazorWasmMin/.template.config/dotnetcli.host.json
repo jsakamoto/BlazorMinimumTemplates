@@ -5,8 +5,33 @@
       "longName": "no-restore",
       "shortName": ""
     },
+    "NoHttps": {
+      "longName": "no-https",
+      "shortName": ""
+    },
     "Hosted": {
       "longName": "hosted"
+    },
+    "Routing": {
+      "longName": "routing"
+    },
+    "Layout": {
+      "longName": "layout"
+    },
+    "Solution": {
+      "longName": "solution"
+    },
+    "kestrelHttpPort": {
+      "isHidden": true
+    },
+    "kestrelHttpsPort": {
+      "isHidden": true
+    },
+    "iisHttpPort": {
+      "isHidden": true
+    },
+    "iisHttpsPort": {
+      "isHidden": true
     }
   }
 }

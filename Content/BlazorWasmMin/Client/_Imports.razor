@@ -8,7 +8,16 @@
 @using Microsoft.JSInterop
 @*#if (Hosted)
 @using BlazorWasmMin.Client
+#endif*@
+@*#if (Hosted && Layout)
+@using BlazorWasmMin.Client.Shared
+#endif*@
+@*#if (Hosted)
 @using BlazorWasmMin.Shared
-#else
+#endif*@
+@*#if (!Hosted)
 @using BlazorWasmMin
+#endif*@
+@*#if (!Hosted && Layout)
+@using BlazorWasmMin.Shared
 #endif*@
