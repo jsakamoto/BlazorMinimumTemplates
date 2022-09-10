@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0.0",
+  "strings": {
+    "name": "Blazor WebAssembly アプリ (空)",
+    "description": "js および css ライブラリを一切含まない、空の Blazor WebAssembly アプリを作成するためのプロジェクト テンプレート。",
+    "parameter.Hosted.name": "ASP.NET Core でホスト(_h)",
+    "parameter.Routing.name": "ルーティングを有効化(_r)",
+    "parameter.Layout.name": "共通レイアウトを有効化(_l)"
+  }
+}
