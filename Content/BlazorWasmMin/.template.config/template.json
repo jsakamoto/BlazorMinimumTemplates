@@ -4,7 +4,8 @@
   "classifications": [
     "Web",
     "Blazor",
-    "WebAssembly"
+    "WebAssembly",
+    "Empty"
   ],
   "groupIdentity": "Toolbelt.Web.Blazor.Wasm.Minimum",
   "identity": "Toolbelt.Web.Blazor.Wasm.Minimum.CSharp",
