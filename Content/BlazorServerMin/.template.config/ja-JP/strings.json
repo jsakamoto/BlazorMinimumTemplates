@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0.0",
+  "strings": {
+    "name": "Blazor Server アプリ (空)",
+    "description": "js および css ライブラリを一切含まない、空の Blazor Server アプリを作成するためのプロジェクト テンプレート。",
+    "parameter.Routing.name": "ルーティングを有効化(_R)",
+    "parameter.Layout.name": "共通レイアウトを有効化(_L)"
+  }
+}
