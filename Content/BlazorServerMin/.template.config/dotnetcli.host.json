@@ -5,6 +5,9 @@
       "longName": "no-restore",
       "shortName": ""
     },
+    "Framework": {
+      "longName": "framework"
+    },
     "NoHttps": {
       "longName": "no-https",
       "shortName": ""

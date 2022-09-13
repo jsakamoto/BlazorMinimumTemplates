@@ -16,13 +16,21 @@ When you run this project, you will see the following page on a web browser.
 
 ## System requirement
 
-- [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+- [.NET SDK](https://dotnet.microsoft.com/download/dotnet/) ver.6 or later
 
 ## How to install
 
+### project templates for .NET 6
+
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::6.0.8.2
 ```
+### project templates for .NET 7
+
+```shell
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::7.0.0-preview.7.22376.6
+```
+
 
 ## How to use
 
@@ -53,6 +61,7 @@ You can see all the options for these project templates with the `--help` option
 option | description
 -------|-----------------
 `--no-restore`    | If specified, skips the automatic restore of the project on create.
+`-f`, `--framework` {"net6.0" or "net7.0}"|  The target framework for the project.
 `--no-https`      | Whether to turn off HTTPS.
 `-ho`, `--hosted` | [Blazor WebAssembly Only] If specified, includes an ASP.NET Core host for the Blazor WebAssembly app.
 `-r`, `--routing` | If specified, enables routing for the Blazor app.
@@ -74,6 +83,15 @@ Once you've installed this project template with the `dotnet new -i ...` command
 When you proceed with the create a new project with the project template "Blazor Server App (minimal)" or "Blazor WebAssembly App (minimal)", you can see the "Additional Information" dialog, and you can configure some options for the Blazor app you are creating.
 
 ![fig.4](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.2/fig-004.png)
+
+## What is the difference between the new .NET 7 empty template?
+
+- .NET 6.0 support
+- Rich initial loading page indicator for Blazor WebAssembly. (The normal project template of Blazor WebAssembly on .NET 7 SDK has an excellent progress indication loading page. but the empty project template only shows "Loading..." static text at the top left corner of the page.)
+- No routing by default. (You can also enable routing support explicitly)
+- No shared layout by default. (You can also enable shared layout explicitly)
+
+In short, this "minimal" template will generate a much simpler project structure and files (by default, it doesn't even have routing code and shared layout code) than the new .NET 7 empty template.
 
 ## License
 

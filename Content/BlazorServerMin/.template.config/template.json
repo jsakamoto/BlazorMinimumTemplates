@@ -7,7 +7,8 @@
     "Empty"
   ],
   "groupIdentity": "Toolbelt.Web.Blazor.Server.Minimum",
-  "identity": "Toolbelt.Web.Blazor.Server.Minimum.CSharp",
+  "identity": "Toolbelt.Web.Blazor.Server.Minimum.CSharp.6.0",
+  "precedence": "6000",
   "name": "Blazor Server App (minimum)",
   "shortName": "blazorservermin",
   "description": "A project template for creating an ASP.NET Core Blazor Server application without any js and css libraries",
@@ -28,6 +29,19 @@
       "datatype": "bool",
       "description": "If specified, skips the automatic restore of the project on create.",
       "defaultValue": "false"
+    },
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net6.0",
+          "description": "Target net60"
+        }
+      ],
+      "replaces": "net6.0",
+      "defaultValue": "net6.0"
     },
     "kestrelHttpPort": {
       "type": "parameter",

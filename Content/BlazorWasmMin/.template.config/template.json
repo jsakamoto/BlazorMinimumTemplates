@@ -8,7 +8,8 @@
     "Empty"
   ],
   "groupIdentity": "Toolbelt.Web.Blazor.Wasm.Minimum",
-  "identity": "Toolbelt.Web.Blazor.Wasm.Minimum.CSharp",
+  "identity": "Toolbelt.Web.Blazor.Wasm.Minimum.CSharp.6.0",
+  "precedence": "6000",
   "name": "Blazor WebAssembly App (minimum)",
   "shortName": "blazorwasmmin",
   "description": "A project template for creating an ASP.NET Core Blazor WebAssembly application without any js and css libraries",
@@ -29,6 +30,19 @@
       "datatype": "bool",
       "description": "If specified, skips the automatic restore of the project on create.",
       "defaultValue": "false"
+    },
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net6.0",
+          "description": "Target net60"
+        }
+      ],
+      "replaces": "net6.0",
+      "defaultValue": "net6.0"
     },
     "kestrelHttpPort": {
       "type": "parameter",
