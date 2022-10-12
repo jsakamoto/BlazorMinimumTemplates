@@ -81,7 +81,7 @@ Once you've installed this project template with the `dotnet new -i ...` command
 
 When you proceed with the create a new project with the project template "Blazor Server App (minimal)" or "Blazor WebAssembly App (minimal)", you can see the "Additional Information" dialog, and you can configure some options for the Blazor app you are creating.
 
-![fig.4](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.2/fig-004.png)
+![fig.4](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.3/fig-004.png)
 
 ## What is the difference between the new .NET 7 empty template?
 
