@@ -23,12 +23,12 @@ When you run this project, you will see the following page on a web browser.
 ### project templates for .NET 6
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::6.0.8.2
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::6.0.10
 ```
-### project templates for .NET 7
+### project templates for .NET 6 and .NET 7
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::7.0.0-preview.7.22376.6
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::7.0.0-rc.2.22476.2
 ```
 
 
