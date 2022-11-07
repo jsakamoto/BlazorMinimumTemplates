@@ -16,19 +16,20 @@ When you run this project, you will see the following page on a web browser.
 
 ## System requirement
 
-- [.NET SDK](https://dotnet.microsoft.com/download/dotnet/) ver.6 or later
+- [.NET SDK](https://dotnet.microsoft.com/download/dotnet/) ver.6, 7, or later
 
 ## How to install
 
-### project templates for .NET 6
+If you use .NET SDK **ver.7 or later**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::6.0.10
+> dotnet new install Toolbelt.AspNetCore.Blazor.Minimum.Templates
 ```
-### project templates for .NET 6 and .NET 7
+
+If you use .NET SDK **ver.6**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::7.0.0-rc.2.22476.2
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates
 ```
 
 ## How to use
@@ -90,7 +91,7 @@ When you proceed with the create a new project with the project template "Blazor
 - No routing by default. (You can also enable routing support explicitly)
 - No shared layout by default. (You can also enable shared layout explicitly)
 
-In short, this "minimal" template will generate a much simpler project structure and files (by default, it doesn't even have routing code and shared layout code) than the new .NET 7 empty template.
+In short, this "minimal" template will generate a **much simpler** project structure and files (by default, it doesn't even have routing code and shared layout code) than the new .NET 7 empty template.
 
 ## License
 
