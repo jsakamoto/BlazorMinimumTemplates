@@ -7,10 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(Framework)' == 'net6.0' ">
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.12" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Framework)' == 'net7.0' ">
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.1" />
   </ItemGroup>
 
   <ItemGroup>
