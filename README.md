@@ -2,9 +2,9 @@
 
 ## Summary
 
-This is a project templates package for ASP.NET Core **"Blazor Server"** and **"Blazor WebAssembly"** application without JavaScript and CSS libraries.
+This is a project templates package for **"Blazor Server"**, **"Blazor WebAssembly"**, and **Full Stack "Blazor Web"** application without JavaScript and CSS libraries.
 
-> Blazor is a framework for building **interactive client-side web UI** with **C#**. [Learn More...](https://blazor.net/)
+> Blazor is a framework for building **full stack web apps** by **C#**, without writing a line of JavaScript. [Learn More...](https://blazor.net/)
 
 The Blazor application project created by these templates contains only the minimum necessary files, like this:
 
