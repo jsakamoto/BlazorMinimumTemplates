@@ -12,7 +12,7 @@
   "precedence": "7000",
   "name": "Blazor WebAssembly App (minimum)",
   "shortName": "blazorwasmmin",
-  "description": "A project template for creating an ASP.NET Core Blazor WebAssembly application without any js and css libraries",
+  "description": "A project template for creating a Blazor WebAssembly app without any js and css libraries",
   "thirdPartyNotices": "https://github.com/jsakamoto/BlazorMinimumTemplates/blob/master/THIRD-PARTY-NOTICES.txt",
   "defaultName": "BlazorWasmApp",
   "preferNameDirectory": true,
@@ -43,6 +43,10 @@
         {
           "choice": "net7.0",
           "description": "Target net70"
+        },
+        {
+          "choice": "net8.0",
+          "description": "Target net80"
         }
       ],
       "replaces": "net7.0",

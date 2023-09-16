@@ -1,29 +1,7 @@
-﻿@*#if (Routing)
+@*#if (Routing)
 @page "/"
 #endif*@
-@*#if (!Routing)
-<!--
-    If you want to enable Blazor routing, you should remove all of this contents,
-    and uncomment the below line. (See also: https://docs.microsoft.com/aspnet/core/blazor/routing )
 
-<Router AppAssembly="@typeof(App).Assembly">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
-    </Found>
-    <NotFound>
-        <PageTitle>Not found</PageTitle>
-        <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
-        </LayoutView>
-    </NotFound>
-</Router>
--->
-
-#endif*@
-@*#if (!Routing && Layout)
-<LayoutView Layout="@typeof(MainLayout)">
-#endif*@
 <div style="text-align:center">
     <h1>
         Welcome to @Title!
@@ -39,20 +17,7 @@
     <li>
         <h2><a target="_blank" href="https://github.com/AdrienTorris/awesome-blazor#awesome-blazor-">Awesome Blazor</a></h2>
     </li>
-@*#if (Framework == "net6.0")
-    <li>
-        <h2>Please take our <a target="_blank" href="https://go.microsoft.com/fwlink/?linkid=2148851"> brief survey</a> and tell us what you think.</h2>
-    </li>
-#endif*@
-@*#if (Framework == "net7.0")
-    <li>
-        <h2>Please take our <a target="_blank" href="https://go.microsoft.com/fwlink/?linkid=2186157">brief survey</a> and tell us what you think.</h2>
-    </li>
-#endif*@
 </ul>
-@*#if (!Routing && Layout)
-</LayoutView>
-#endif*@
 
 @code {
     string Title = "Blazor";
