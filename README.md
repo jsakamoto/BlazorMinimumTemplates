@@ -23,13 +23,13 @@ When you run this project, you will see the following page on a web browser.
 If you use .NET SDK **ver.7 or later**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new install Toolbelt.AspNetCore.Blazor.Minimum.Templates::8.0.0-rc.2.23480.2
+> dotnet new install Toolbelt.AspNetCore.Blazor.Minimum.Templates::8.0.0
 ```
 
 If you use .NET SDK **ver.6**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::8.0.0-rc.2.23480.2
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::8.0.0
 ```
 
 ## How to use
