@@ -91,14 +91,14 @@ When you proceed with creating a new project with the project template "Blazor S
 
 ![fig.4](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.3/fig-004.png)
 
-## What is the difference between the new .NET 7 empty template?
+## What is the difference between the empty template built-in .NET SDK?
 
 - .NET 6.0 support
-- Rich initial loading page indicator for Blazor WebAssembly. (The normal project template of Blazor WebAssembly on .NET 7 SDK has an excellent progress indication loading page. but the empty project template only shows "Loading..." static text at the top left corner of the page.)
+- Rich initial loading page indicator for Blazor WebAssembly. (The normal project template of Blazor WebAssembly on .NET SDK has an excellent progress indication loading page. but the empty project template only shows "Loading..." static text at the top left corner of the page.)
 - No routing by default. (You can also enable routing support explicitly)
 - No shared layout by default. (You can also enable shared layout explicitly)
 
-In short, this "minimal" template will generate a **much simpler** project structure and files (by default, it doesn't even have routing code and shared layout code) than the new .NET 7 empty template.
+In short, this "minimal" template will generate a **much simpler** project structure and files (by default, it doesn't even have routing code and shared layout code) than the Blazor empty template.
 
 ## License
 
