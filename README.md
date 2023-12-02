@@ -72,7 +72,7 @@ option | description
 `-ho`, `--hosted` | [Blazor WebAssembly Only] If specified, includes an ASP.NET Core host for the Blazor WebAssembly app.
 `-r`, `--routing` | If specified, enables routing for the Blazor app.
 `-la`, `--layout` | If specified, enables shared layout for the Blazor app.
-`--use-server` {`true` or `false`}    | [Blazor Web app only] Use interactive server components. (The default value is `true`) 
+`--use-server` {`true` or `false`}    | [Blazor Web app only] Use interactive server components. (The default value is `false`) 
 `-s`, `--solution` | [.NET CLI only] If specified, adds a solution file for the standalone Blazor WebAssembly or Blazor Server app.
 
 For example, if you want an ASP.NET Core hosted Blazor WebAssembly app project, please specify the `--hosted` switch.
@@ -83,7 +83,7 @@ For example, if you want an ASP.NET Core hosted Blazor WebAssembly app project, 
 
 ### Visual Studio
 
-Once you've installed this project template with the `dotnet new -i ...` command, you will see these project templates in your Visual Studio's "Create new project" dialog.
+Once you've installed this project template with the `dotnet new install ...` command, you will see these project templates in your Visual Studio's "Create new project" dialog.
 
 ![fig.3](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.3/fig-003.png)
 
