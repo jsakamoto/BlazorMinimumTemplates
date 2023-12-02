@@ -26,7 +26,7 @@
 .blazor-error-boundary::after {
     content: "An error has occurred."
 }
-/*#if (Framework == "net7.0")
+/*#if (Framework != "net6.0")
 
 .loading-progress {
     position: relative;

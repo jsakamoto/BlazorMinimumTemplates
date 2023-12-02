@@ -8,12 +8,12 @@ builder.Services.AddRazorComponents();
 #else
 builder.Services.AddRazorComponents()
     #if (UseServer && UseWebAssembly)
-    .AddServerComponents()
-    .AddWebAssemblyComponents();
+    .AddInteractiveServerComponents()
+    .AddInteractiveWebAssemblyComponents();
     #elif (UseServer)
-    .AddServerComponents();
+    .AddInteractiveServerComponents();
     #elif (UseWebAssembly)
-    .AddWebAssemblyComponents();
+    .AddInteractiveWebAssemblyComponents();
     #endif
 #endif
 
@@ -42,18 +42,19 @@ app.UseHttpsRedirection();
 
 #endif
 app.UseStaticFiles();
+app.UseAntiforgery();
 
 #if (!UseServer && !UseWebAssembly)
 app.MapRazorComponents<App>();
 #else
 app.MapRazorComponents<App>()
     #if (UseServer && UseWebAssembly)
-    .AddServerRenderMode()
-    .AddWebAssemblyRenderMode();
+    .AddInteractiveServerRenderMode()
+    .AddInteractiveWebAssemblyRenderMode();
     #elif (UseServer)
-    .AddServerRenderMode();
+    .AddInteractiveServerRenderMode();
     #elif (UseWebAssembly)
-    .AddWebAssemblyRenderMode();
+    .AddInteractiveWebAssemblyRenderMode();
     #endif
 #endif
 
