@@ -11,7 +11,7 @@
   "precedence": "7000",
   "name": "Blazor Server App (minimum)",
   "shortName": "blazorservermin",
-  "description": "A project template for creating an ASP.NET Core Blazor Server application without any js and css libraries",
+  "description": "A project template for creating a Blazor Server app without any js and css libraries",
   "thirdPartyNotices": "https://github.com/jsakamoto/BlazorMinimumTemplates/blob/master/THIRD-PARTY-NOTICES.txt",
   "defaultName": "BlazorServerApp",
   "preferNameDirectory": true,
@@ -42,6 +42,10 @@
         {
           "choice": "net7.0",
           "description": "Target net70"
+        },
+        {
+          "choice": "net8.0",
+          "description": "Target net80"
         }
       ],
       "replaces": "net7.0",
@@ -141,19 +145,19 @@
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
-      "description": "If specified, enables routing for the Blazor WebAssembly app."
+      "description": "If specified, enables routing for the Blazor Server app."
     },
     "Layout": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
-      "description": "If specified, enables shared layout for the Blazor WebAssembly app."
+      "description": "If specified, enables shared layout for the Blazor Server app."
     },
     "Solution": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false",
-      "description": "If specified, adds a solution file for the standalone Blazor WebAssembly app."
+      "description": "If specified, adds a solution file for the standalone Blazor Server app."
     }
   },
   "guids": [

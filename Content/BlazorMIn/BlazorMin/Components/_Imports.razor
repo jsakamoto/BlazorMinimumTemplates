@@ -1,0 +1,23 @@
+﻿@using System.Net.Http
+@using System.Net.Http.Json
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using static Microsoft.AspNetCore.Components.Web.RenderMode
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.JSInterop
+@using BlazorMin
+@using BlazorMin.Components
+@*#if (Interactivity == "None" || Interactivity == "Server")*@
+@*#if (Layout)*@
+@using BlazorMin.Components.Layout
+@*#endif*@
+@using BlazorMin.Components.Pages
+@*#endif*@
+@*#if (Interactivity == "WebAssembly" || Interactivity == "Auto")*@
+@using BlazorMin.Client
+@*#if (Layout)*@
+@using BlazorMin.Client.Layout
+@*#endif*@
+@using BlazorMin.Client.Pages
+@*#endif*@

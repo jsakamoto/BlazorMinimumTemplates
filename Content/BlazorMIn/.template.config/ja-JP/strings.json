@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0.0",
+  "strings": {
+    "name": "Blazor Web アプリ (空)",
+    "description": "js および css ライブラリを一切含まない、空の Blazor Web アプリを作成するためのプロジェクト テンプレート。",
+    "parameter.UseServer.name": "対話型サーバー コンポーネントを使用する(_U)",
+    "parameter.UseServer.description": "指定した場合、サーバー上でコンポーネントを対話的にレンダリングするようにプロジェクトを構成します。",
+    "parameter.UseWebAssembly.name": "対話型 WebAssembly サーバー コンポーネントを使用する(_U)",
+    "parameter.UseWebAssembly.description": "指定した場合、WebAssembly を使用してブラウザーでコンポーネントを対話的にレンダリングするようにプロジェクトを構成します。",
+    "parameter.Routing.name": "ルーティングを有効化(_R)",
+    "parameter.Layout.name": "共通レイアウトを有効化(_L)"
+  }
+}

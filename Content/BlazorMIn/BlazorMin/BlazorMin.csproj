@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace Condition="'$(name)' != '$(name{-VALUE-FORMS-}safe_namespace)'">BlazorMin</RootNamespace>
+    <AssemblyName Condition="'$(name)' != '$(name{-VALUE-FORMS-}safe_namespace)'">$(AssemblyName.Replace(' ', '_'))</AssemblyName>
+  </PropertyGroup>
+  <!--#if (Interactivity == "WebAssembly" || Interactivity == "Auto") -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorMin.Client\BlazorMin.Client.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
+  </ItemGroup>
+  <!-- #endif -->
+
+</Project>

@@ -2,9 +2,9 @@
 
 ## Summary
 
-This is a project templates package for ASP.NET Core **"Blazor Server"** and **"Blazor WebAssembly"** application without JavaScript and CSS libraries.
+This is a project templates package for **"Blazor Server"**, **"Blazor WebAssembly"**, and **Full Stack "Blazor Web"** application without JavaScript and CSS libraries.
 
-> Blazor is a framework for building **interactive client-side web UI** with **C#**. [Learn More...](https://blazor.net/)
+> Blazor is a framework for building **full stack web apps** by **C#**, without writing a line of JavaScript. [Learn More...](https://blazor.net/)
 
 The Blazor application project created by these templates contains only the minimum necessary files, like this:
 
@@ -16,36 +16,42 @@ When you run this project, you will see the following page on a web browser.
 
 ## System requirement
 
-- [.NET SDK](https://dotnet.microsoft.com/download/dotnet/) ver.6, 7, or later
+- [.NET SDK](https://dotnet.microsoft.com/download/dotnet/) ver.6, 7, 8, or later
 
 ## How to install
 
 If you use .NET SDK **ver.7 or later**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new install Toolbelt.AspNetCore.Blazor.Minimum.Templates
+> dotnet new install Toolbelt.AspNetCore.Blazor.Minimum.Templates::8.0.0
 ```
 
 If you use .NET SDK **ver.6**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::8.0.0
 ```
 
 ## How to use
 
 ### .NET CLI
 
-If you want to create a new Blazor **Server** application project, type `dotnet new` command with a short name of the template "**blazorservermin**".
+If you want to create a new Blazor **Server app** project, type the `dotnet new` command with the short name of the template "**blazorservermin**".
 
 ```shell
 > dotnet new blazorservermin
 ```
 
-If you want to create a new Blazor **WebAssembly** application project which standalone edition, type `dotnet new` command with a short name of the template "**blazorwasmmin**".
+If you want to create a new Blazor **WebAssembly app** project which standalone edition, type the `dotnet new` command with the short name of the template "**blazorwasmmin**".
 
 ```shell
 > dotnet new blazorwasmmin
+```
+
+If you want to create a new Blazor **Web app** project that is a new model since .NET 8, type the `dotnet new` command with the short name of the template "**blazormin**".
+
+```shell
+> dotnet new blazormin
 ```
 
 These commands create a new project in the current directory, and the project name will be the same as the current directory name.
@@ -61,11 +67,12 @@ You can see all the options for these project templates with the `--help` option
 option | description
 -------|-----------------
 `--no-restore`    | If specified, skips the automatic restore of the project on create.
-`-f`, `--framework` {"net6.0" or "net7.0}"|  The target framework for the project.
+`-f`, `--framework` {`net6.0`, `net7.0`, or `net8.0`} |  The target framework for the project.
 `--no-https`      | Whether to turn off HTTPS.
 `-ho`, `--hosted` | [Blazor WebAssembly Only] If specified, includes an ASP.NET Core host for the Blazor WebAssembly app.
 `-r`, `--routing` | If specified, enables routing for the Blazor app.
 `-la`, `--layout` | If specified, enables shared layout for the Blazor app.
+`--use-server` {`true` or `false`}    | [Blazor Web app only] Use interactive server components. (The default value is `false`) 
 `-s`, `--solution` | [.NET CLI only] If specified, adds a solution file for the standalone Blazor WebAssembly or Blazor Server app.
 
 For example, if you want an ASP.NET Core hosted Blazor WebAssembly app project, please specify the `--hosted` switch.
@@ -76,22 +83,22 @@ For example, if you want an ASP.NET Core hosted Blazor WebAssembly app project, 
 
 ### Visual Studio
 
-Once you've installed this project template with the `dotnet new -i ...` command, you will see these project templates in your Visual Studio's "Create new project" dialog.
+Once you've installed this project template with the `dotnet new install ...` command, you will see these project templates in your Visual Studio's "Create new project" dialog.
 
 ![fig.3](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.3/fig-003.png)
 
-When you proceed with the create a new project with the project template "Blazor Server App (minimal)" or "Blazor WebAssembly App (minimal)", you can see the "Additional Information" dialog, and you can configure some options for the Blazor app you are creating.
+When you proceed with creating a new project with the project template "Blazor Server App (minimal)", "Blazor WebAssembly App (minimal)", or "Blazor Web App (minimal)", you can see the "Additional Information" dialog, and you can configure some options for the Blazor app you are creating.
 
 ![fig.4](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.3/fig-004.png)
 
-## What is the difference between the new .NET 7 empty template?
+## What is the difference between the empty template built-in .NET SDK?
 
 - .NET 6.0 support
-- Rich initial loading page indicator for Blazor WebAssembly. (The normal project template of Blazor WebAssembly on .NET 7 SDK has an excellent progress indication loading page. but the empty project template only shows "Loading..." static text at the top left corner of the page.)
+- Rich initial loading page indicator for Blazor WebAssembly. (The normal project template of Blazor WebAssembly on .NET SDK has an excellent progress indication loading page. but the empty project template only shows "Loading..." static text at the top left corner of the page.)
 - No routing by default. (You can also enable routing support explicitly)
 - No shared layout by default. (You can also enable shared layout explicitly)
 
-In short, this "minimal" template will generate a **much simpler** project structure and files (by default, it doesn't even have routing code and shared layout code) than the new .NET 7 empty template.
+In short, this "minimal" template will generate a **much simpler** project structure and files (by default, it doesn't even have routing code and shared layout code) than the Blazor empty template.
 
 ## License
 
