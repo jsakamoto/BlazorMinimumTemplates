@@ -23,13 +23,13 @@ When you run this project, you will see the following page on a web browser.
 If you use .NET SDK **ver.7 or later**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new install Toolbelt.AspNetCore.Blazor.Minimum.Templates::8.0.0
+> dotnet new install Toolbelt.AspNetCore.Blazor.Minimum.Templates::8.0.100
 ```
 
 If you use .NET SDK **ver.6**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::8.0.0
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::8.0.100
 ```
 
 ## How to use
@@ -69,11 +69,11 @@ option | description
 `--no-restore`    | If specified, skips the automatic restore of the project on create.
 `-f`, `--framework` {`net6.0`, `net7.0`, or `net8.0`} |  The target framework for the project.
 `--no-https`      | Whether to turn off HTTPS.
-`-ho`, `--hosted` | [Blazor WebAssembly Only] If specified, includes an ASP.NET Core host for the Blazor WebAssembly app.
+`-ho`, `--hosted` | **[Blazor WebAssembly Only]** If specified, includes an ASP.NET Core host for the Blazor WebAssembly app.
 `-r`, `--routing` | If specified, enables routing for the Blazor app.
-`-la`, `--layout` | If specified, enables shared layout for the Blazor app.
-`--use-server` {`true` or `false`}    | [Blazor Web app only] Use interactive server components. (The default value is `false`) 
-`-s`, `--solution` | [.NET CLI only] If specified, adds a solution file for the standalone Blazor WebAssembly or Blazor Server app.
+`--layout` | If specified, enables shared layout for the Blazor app.
+`-int`, `--interactivity` {`none`, `server`, `webassembly`, or `auto`}    | **[Blazor Web app only]** Chooses which interactive render mode to use for interactive components. (The default value is `none`) 
+`-s`, `--solution` | **[.NET CLI only]** If specified, adds a solution file for the standalone Blazor WebAssembly or Blazor Server app.
 
 For example, if you want an ASP.NET Core hosted Blazor WebAssembly app project, please specify the `--hosted` switch.
 
