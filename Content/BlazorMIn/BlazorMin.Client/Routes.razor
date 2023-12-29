@@ -1,11 +1,10 @@
-
-<Router AppAssembly="@typeof(App).Assembly">
+<Router AppAssembly="@typeof(Program).Assembly">
     <Found Context="routeData">
 @*#if (Layout)
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(Layout.MainLayout)" />
-##else
+#else
         <RouteView RouteData="@routeData" />
-##endif*@
+#endif*@
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
 </Router>

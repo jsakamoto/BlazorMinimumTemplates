@@ -1,18 +1,21 @@
+#if (Interactivity == "WebAssembly" || Interactivity == "Auto")
+using BlazorMin.Client.Pages;
+#endif
 using BlazorMin.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-#if (!UseServer && !UseWebAssembly)
+#if (Interactivity == "None")
 builder.Services.AddRazorComponents();
 #else
 builder.Services.AddRazorComponents()
-    #if (UseServer && UseWebAssembly)
+    #if (Interactivity == "Auto")
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
-    #elif (UseServer)
+    #elif (Interactivity == "Server")
     .AddInteractiveServerComponents();
-    #elif (UseWebAssembly)
+    #elif (Interactivity == "WebAssembly")
     .AddInteractiveWebAssemblyComponents();
     #endif
 #endif
@@ -20,7 +23,7 @@ builder.Services.AddRazorComponents()
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-#if (UseWebAssembly)
+#if (Interactivity == "WebAssembly" || Interactivity == "Auto")
 if (app.Environment.IsDevelopment())
 {
     app.UseWebAssemblyDebugging();
@@ -30,7 +33,7 @@ else
 if (!app.Environment.IsDevelopment())
 #endif
 {
-    app.UseExceptionHandler("/Error");
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
 #if (!NoHttps)
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
@@ -44,17 +47,19 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-#if (!UseServer && !UseWebAssembly)
+#if (Interactivity == "None")
 app.MapRazorComponents<App>();
 #else
 app.MapRazorComponents<App>()
-    #if (UseServer && UseWebAssembly)
-    .AddInteractiveServerRenderMode()
-    .AddInteractiveWebAssemblyRenderMode();
-    #elif (UseServer)
+    #if (Interactivity == "Server")
     .AddInteractiveServerRenderMode();
-    #elif (UseWebAssembly)
-    .AddInteractiveWebAssemblyRenderMode();
+    #endif
+    #if (Interactivity == "Auto")
+    .AddInteractiveServerRenderMode()
+    #endif
+    #if (Interactivity == "WebAssembly" || Interactivity == "Auto")
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(Home).Assembly);
     #endif
 #endif
 

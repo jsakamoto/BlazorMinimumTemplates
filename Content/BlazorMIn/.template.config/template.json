@@ -133,19 +133,30 @@
       "defaultValue": "false",
       "description": "Whether to turn off HTTPS."
     },
-    "UseWebAssembly": {
+    "Interactivity": {
+      "displayName": "_Interactive render mode",
+      "description": "Chooses which interactive render mode to use for interactive components",
       "type": "parameter",
-      "datatype": "bool",
-      "defaultValue": "false",
-      "displayName": "_Use interactive WebAssembly components",
-      "description": "Configures whether to support rendering components interactively in the browser using WebAssembly. The default value is false."
-    },
-    "UseServer": {
-      "type": "parameter",
-      "datatype": "bool",
-      "defaultValue": "false",
-      "displayName": "_Use interactive server components",
-      "description": "Configures whether to support rendering components interactively on the server via a SignalR WebSocket connection. The default value is true."
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "None",
+          "description": "No interactivity (static server rendering only)"
+        },
+        {
+          "choice": "Server",
+          "description": "Runs on the server"
+        },
+        {
+          "choice": "WebAssembly",
+          "description": "Runs in the browser using WebAssembly"
+        },
+        {
+          "choice": "Auto",
+          "description": "Uses Server while downloading WebAssembly assets, then uses WebAssembly"
+        }
+      ],
+      "defaultValue": "None"
     },
     "Routing": {
       "type": "parameter",
@@ -167,7 +178,9 @@
     }
   },
   "guids": [
-    "A34DA4F5-B21D-4757-BD8B-A03D34D209E2"
+    "A34DA4F5-B21D-4757-BD8B-A03D34D209E2",
+    "B8D8DFFF-3971-4C1C-B6F0-0FDE31504D1B",
+    "A8CCCF7D-37EC-490E-9DD6-3D4F180C33EE"
   ],
   "sourceName": "BlazorMin",
   "sources": [
@@ -184,36 +197,97 @@
         {
           "condition": "(!Solution || (HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\"))",
           "exclude": [
-            "*.sln"
+            "BlazorMin.sln",
+            "BlazorMin/BlazorMin.sln"
+          ]
+        },
+        {
+          "condition": "(Interactivity == \"WebAssembly\" || Interactivity == \"Auto\")",
+          "exclude": [
+            "BlazorMin/BlazorMin.sln"
+          ]
+        },
+        {
+          "condition": "Interactivity == \"None\"",
+          "exclude": [
+            "BlazorMin/wwwroot/css/blazor-ui.css"
+          ]
+        },
+        {
+          "condition": "(Interactivity == \"WebAssembly\" || Interactivity == \"Auto\")",
+          "exclude": [
+            "BlazorMin/Components/Pages/**"
+          ]
+        },
+        {
+          "condition": "(Interactivity == \"WebAssembly\" || Interactivity == \"Auto\" || !Layout)",
+          "exclude": [
+            "BlazorMin/Components/Layout/**"
+          ]
+        },
+        {
+          "condition": "(Interactivity == \"WebAssembly\" || Interactivity == \"Auto\" || !Routing)",
+          "exclude": [
+            "BlazorMin/Components/Routes.razor"
+          ]
+        },
+        {
+          "condition": "(Interactivity != \"Server\" || Routing || !Layout)",
+          "exclude": [
+            "BlazorMin/Components/LayoutRoot.razor"
           ]
         },
         {
           "condition": "(!Layout)",
           "exclude": [
-            "Components/Layout/**"
+            "BlazorMin.Client/Layout/**"
           ]
         },
         {
           "condition": "(!Routing)",
           "exclude": [
-            "Components/Routes.razor"
+            "BlazorMin.Client/Routes.razor"
           ]
+        },
+        {
+          "condition": "(Routing || !Layout)",
+          "exclude": [
+            "BlazorMin.Client/LayoutRoot.razor"
+          ]
+        },
+        {
+          "condition": "(Interactivity == \"None\" || Interactivity == \"Server\")",
+          "exclude": [
+            "BlazorMin.Client/**",
+            "BlazorMin.sln"
+          ],
+          "rename": {
+            "BlazorMin/": ""
+          }
         }
       ]
     }
   ],
   "primaryOutputs": [
     {
-      "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "condition": "((Interactivity == \"None\" || Interactivity == \"Server\") && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
       "path": "BlazorMin.csproj"
+    },
+    {
+      "condition": "((Interactivity == \"WebAssembly\" || Interactivity == \"Auto\") && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "path": "BlazorMin/BlazorMin.csproj"
     },
     {
       "condition": "(Solution && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
       "path": "BlazorMin.sln"
     },
     {
-      "condition": "(!Solution && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+      "condition": "((Interactivity == \"None\" || Interactivity == \"Server\") && !Solution && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
       "path": "BlazorMin.csproj"
+    },
+    {
+      "condition": "((Interactivity == \"WebAssembly\" || Interactivity == \"Auto\") && !Solution && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+      "path": "BlazorMin/BlazorMin.csproj"
     }
   ],
   "postActions": [

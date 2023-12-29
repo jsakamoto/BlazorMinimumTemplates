@@ -15,14 +15,12 @@
   "disableHttpsSymbol": "NoHttps",
   "symbolInfo": [
     {
-      "id": "UseServer",
+      "id": "Interactivity",
       "isVisible": true,
-      "persistenceScope": "templateGroup"
-    },
-    {
-      "id": "UseWebAssembly",
-      "isVisible": false,
-      "persistenceScope": "templateGroup"
+      "persistenceScope": "templateGroup",
+      "name": {
+        "text": "_Interactive render mode"
+      }
     },
     {
       "id": "Routing",
