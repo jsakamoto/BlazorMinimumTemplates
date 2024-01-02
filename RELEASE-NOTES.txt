@@ -1,2 +1,5 @@
+8.0.101
+- Fix: A client project wasn't included in a solution file when a project was generated on Visual Studio.
+
 8.0.100
 - Improve: .NET 8 Blazor App style project support

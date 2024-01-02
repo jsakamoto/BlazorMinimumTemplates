@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Toolbelt.AspNetCore.Blazor.Minimum.Templates</id>
-    <version>8.0.100</version>
+    <version>8.0.101</version>
     <description>
       Templates for ASP.NET Core Blazor without any js and css libraries.
     </description>
@@ -15,6 +15,15 @@
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
+    <releaseNotes>
+      <![CDATA[
+      8.0.101
+      - Fix: A client project wasn't included in a solution file when a project was generated on Visual Studio.
+
+      To see all the change logs, please visit the following URL.
+      - https://github.com/jsakamoto/BlazorMinimumTemplates/blob/master/RELEASE-NOTES.txt
+      ]]>
+    </releaseNotes>
   </metadata>
   <files>
     <file src=".assets\nupkg-icon.png" target="nupkg-icon.png" />
