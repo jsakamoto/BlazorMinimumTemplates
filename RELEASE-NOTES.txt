@@ -1,0 +1,2 @@
+8.0.100
+- Improve: .NET 8 Blazor App style project support
