@@ -270,24 +270,20 @@
   ],
   "primaryOutputs": [
     {
-      "condition": "((Interactivity == \"None\" || Interactivity == \"Server\") && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "condition": "(Interactivity == \"None\" || Interactivity == \"Server\")",
       "path": "BlazorMin.csproj"
     },
     {
-      "condition": "((Interactivity == \"WebAssembly\" || Interactivity == \"Auto\") && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+      "condition": "(Interactivity == \"WebAssembly\" || Interactivity == \"Auto\")",
       "path": "BlazorMin/BlazorMin.csproj"
+    },
+    {
+      "condition": "(Interactivity == \"WebAssembly\" || Interactivity == \"Auto\")",
+      "path": "BlazorMin.Client/BlazorMin.Client.csproj"
     },
     {
       "condition": "(Solution && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
       "path": "BlazorMin.sln"
-    },
-    {
-      "condition": "((Interactivity == \"None\" || Interactivity == \"Server\") && !Solution && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
-      "path": "BlazorMin.csproj"
-    },
-    {
-      "condition": "((Interactivity == \"WebAssembly\" || Interactivity == \"Auto\") && !Solution && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
-      "path": "BlazorMin/BlazorMin.csproj"
     }
   ],
   "postActions": [
