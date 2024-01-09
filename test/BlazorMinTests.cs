@@ -6,6 +6,8 @@ namespace Toolbelt.AspNetCore.Blazor.Minimum.Templates.Test;
 [Parallelizable(ParallelScope.Children)]
 public class BlazorMinTests
 {
+    private static int _numberOfApp;
+
     public static IEnumerable<object[]> GetTestCases()
     {
         return from interactiveMode in new[] { InteractiveMode.None, InteractiveMode.Server, InteractiveMode.WebAssembly, InteractiveMode.Auto }
@@ -19,11 +21,13 @@ public class BlazorMinTests
     {
         Console.WriteLine($"{interactiveMode}, {routing} {layout}");
 
+        var numberOfApp = Interlocked.Increment(ref _numberOfApp);
+
         using var workDir = new WorkDirectory();
 
         var args = string.Join(' ', new[] {
             "new", "blazormin",
-            "-n", $"BlazorApp{Random.Shared.Next(0,1000):D4}",
+            "-n", $"BlazorApp{numberOfApp:D4}",
             "-o", ".",
             "-f", "net8.0",
             "-int", interactiveMode.ToString(),

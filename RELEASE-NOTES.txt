@@ -1,3 +1,6 @@
+8.0.101.1
+- Update: Updated the referenced packages to 8.0.1, 7.0.16, and 6.0.26.
+
 8.0.101
 - Fix: A client project wasn't included in a solution file when a project was generated on Visual Studio.
 
