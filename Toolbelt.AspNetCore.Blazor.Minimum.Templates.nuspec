@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Toolbelt.AspNetCore.Blazor.Minimum.Templates</id>
-    <version>8.0.101.1</version>
+    <version>8.0.200</version>
     <description>
       Templates for ASP.NET Core Blazor without any js and css libraries.
     </description>
@@ -17,8 +17,8 @@
     </packageTypes>
     <releaseNotes>
       <![CDATA[
-      8.0.101.1
-      - Update: Updated the referenced packages to 8.0.1, 7.0.16, and 6.0.26.
+      8.0.200
+      - Update: Updated the referenced packages to 8.0.2 and 6.0.27.
       
       To see all the change logs, please visit the following URL.
       - https://github.com/jsakamoto/BlazorMinimumTemplates/blob/master/RELEASE-NOTES.txt
