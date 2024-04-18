@@ -13,13 +13,14 @@ public class BlazorMinTests
         return from interactiveMode in new[] { InteractiveMode.None, InteractiveMode.Server, InteractiveMode.WebAssembly, InteractiveMode.Auto }
                from useRouting in new[] { RoutingOptions.NoRouting, RoutingOptions.Routing, }
                from useLayout in new[] { LayoutOptions.NoLayout, LayoutOptions.Layout }
-               select new object[] { interactiveMode, useRouting, useLayout };
+               from framework in new[] { TargetFramework.Net8, TargetFramework.Net9 }
+               select new object[] { interactiveMode, useRouting, useLayout, framework };
     }
 
     [TestCaseSource(nameof(GetTestCases))]
-    public async Task DotNetNewAndBuild_Test(InteractiveMode interactiveMode, RoutingOptions routing, LayoutOptions layout)
+    public async Task DotNetNewAndBuild_Test(InteractiveMode interactiveMode, RoutingOptions routing, LayoutOptions layout, string framework)
     {
-        Console.WriteLine($"{interactiveMode}, {routing} {layout}");
+        Console.WriteLine($"{interactiveMode}, {routing}, {layout}, {framework}");
 
         var numberOfApp = Interlocked.Increment(ref _numberOfApp);
 
@@ -29,7 +30,7 @@ public class BlazorMinTests
             "new", "blazormin",
             "-n", $"BlazorApp{numberOfApp:D4}",
             "-o", ".",
-            "-f", "net8.0",
+            "-f", framework,
             "-int", interactiveMode.ToString(),
             routing == RoutingOptions.Routing ? "-r" : "",
             layout == LayoutOptions.Layout ? "--layout" : "",

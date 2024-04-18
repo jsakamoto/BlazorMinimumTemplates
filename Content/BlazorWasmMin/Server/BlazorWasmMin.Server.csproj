@@ -15,6 +15,9 @@
   <ItemGroup Condition=" '$(Framework)' == 'net8.0' ">
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.4" />
   </ItemGroup>
+  <ItemGroup Condition=" '$(Framework)' == 'net9.0' ">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.0-preview.3.*" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Client\BlazorWasmMin.Client.csproj" />

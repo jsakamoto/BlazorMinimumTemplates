@@ -38,6 +38,10 @@
         {
           "choice": "net8.0",
           "description": "Target net80"
+        },
+        {
+          "choice": "net9.0",
+          "description": "Target net90"
         }
       ],
       "replaces": "net8.0",

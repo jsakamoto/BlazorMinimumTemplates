@@ -18,7 +18,7 @@ When you run this project, you will see the following page on a web browser.
 
 ## System requirement
 
-- [.NET SDK](https://dotnet.microsoft.com/download/dotnet/) ver.6, 7, 8, or later
+- [.NET SDK](https://dotnet.microsoft.com/download/dotnet/) ver.6, 7, 8, 9 or later
 
 ## How to install
 
