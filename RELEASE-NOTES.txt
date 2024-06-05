@@ -1,6 +1,9 @@
 9.0.100-preview.3
 - Update: Add support for .NET 9.0 preview.
 
+8.0.301
+- Update: Updated the referenced packages to 8.0.6, 7.0.20 and 6.0.31.
+
 8.0.204
 - Update: Updated the referenced packages to 8.0.4, 7.0.18 and 6.0.29.
 
