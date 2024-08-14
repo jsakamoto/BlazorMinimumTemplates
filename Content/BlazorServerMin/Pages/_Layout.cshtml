@@ -8,8 +8,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="~/" />
+@*#if (Framework == "net8.0")*@
     <link rel="stylesheet" href="css/blazor-ui.css" />
-    <link rel="stylesheet" href="BlazorServerMin.styles.css"  />
+    <link rel="stylesheet" href="BlazorServerMin.styles.css" />
+@*#else*@
+    <link rel="stylesheet" href="css/blazor-ui.css" asp-append-version="true" />
+    <link rel="stylesheet" href="BlazorServerMin.styles.css" asp-append-version="true" />
+@*#endif*@
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body>

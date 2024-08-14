@@ -7,10 +7,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-@*#if (Interactivity != "None")*@
+@*#if (Interactivity != "None" && Framework == "net8.0")*@
     <link rel="stylesheet" href="css/blazor-ui.css" />
 @*#endif*@
+@*#if (Interactivity != "None" && Framework != "net8.0")*@
+    <link rel="stylesheet" href="@Assets["css/blazor-ui.css"]" />
+@*#endif*@
+@*#if (Framework == "net8.0")*@
     <link rel="stylesheet" href="BlazorMin.styles.css" />
+@*#else*@
+    <link rel="stylesheet" href="@Assets["BlazorMin.styles.css"]" />
+@*#endif*@
 @*#if (Interactivity == "None")*@
     <HeadOutlet />
 @*#elif (Interactivity == "Server")*@
