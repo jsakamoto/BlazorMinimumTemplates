@@ -207,6 +207,26 @@
             "App.NoRouting.razor": "Pages/Index.razor",
             "App.razor.css": "Pages/Index.razor.css"
           }
+        },
+        {
+          "condition": "Framework == \"net6.0\"",
+          "exclude": [
+            "Pages/_Host.Net7.cshtml"
+          ],
+          "rename": {
+            "Pages/_Host.Net6.cshtml": "Pages/_Host.cshtml",
+            "Pages/_Layout.Net6.cshtml": "Pages/_Layout.cshtml"
+          }
+        },
+        {
+          "condition": "Framework != \"net6.0\"",
+          "exclude": [
+            "Pages/_Host.Net6.cshtml",
+            "Pages/_Layout.Net6.cshtml"
+          ],
+          "rename": {
+            "Pages/_Host.Net7.cshtml": "Pages/_Host.cshtml"
+          }
         }
       ]
     }
