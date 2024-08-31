@@ -1,44 +1,44 @@
-9.0.100-preview.7.1
+v.9.0.100-preview.7.1
 - Improve: Use "MapStaticAssets" instead of "UseStaticWebAssets" in the Startup.cs when the project is targeting the .NET 9.
 
-9.0.100-preview.7
+v.9.0.100-preview.7
 - Update: Updated the referenced packages to 9.0.0 preview 7.
 
-9.0.100-preview.6
+v.9.0.100-preview.6
 - Update: Updated the referenced packages to 9.0.0 preview 6.
 
-9.0.100-preview.4
+v.9.0.100-preview.4
 - Update: Updated the referenced packages to 9.0.0 preview 4.
 
-9.0.100-preview.3
+v.9.0.100-preview.3
 - Update: Add support for .NET 9.0 preview.
 
-8.0.400
+v.8.0.400
 - Update: Updated the referenced packages to 8.0.8 and 6.0.33.
 
-8.0.303
+v.8.0.303
 - Update: Updated the referenced packages to 8.0.7 and 6.0.32.
 
-8.0.301
+v.8.0.301
 - Update: Updated the referenced packages to 8.0.6, 7.0.20 and 6.0.31.
 
-8.0.204
+v.8.0.204
 - Update: Updated the referenced packages to 8.0.4, 7.0.18 and 6.0.29.
 
-8.0.202
+v.8.0.202
 - Update: Updated the referenced packages to 8.0.3, 7.0.17 and 6.0.28.
 
-8.0.200.1
+v.8.0.200.1
 - Update: Updated the referenced packages to 7.0.16.
 
-8.0.200
+v.8.0.200
 - Update: Updated the referenced packages to 8.0.2 and 6.0.27.
 
-8.0.101.1
+v.8.0.101.1
 - Update: Updated the referenced packages to 8.0.1, 7.0.16, and 6.0.26.
 
-8.0.101
+v.8.0.101
 - Fix: A client project wasn't included in a solution file when a project was generated on Visual Studio.
 
-8.0.100
+v.8.0.100
 - Improve: .NET 8 Blazor App style project support
