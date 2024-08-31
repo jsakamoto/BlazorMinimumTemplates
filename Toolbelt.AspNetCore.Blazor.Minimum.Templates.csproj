@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project=".\Version.props" />
+
+  <PropertyGroup>
+    <!-- The package metadata. Fill in the properties marked as TODO below -->
+    <!-- Follow the instructions on https://learn.microsoft.com/en-us/nuget/create-packages/package-authoring-best-practices -->
+    <PackageId>Toolbelt.AspNetCore.Blazor.Minimum.Templates</PackageId>
+    <PackageVersion>$(Version)</PackageVersion>
+    <Title>Blazor Minimum Templates</Title>
+    <Authors>J.Sakamoto</Authors>
+    <Description>Templates for ASP.NET Core Blazor without any js and css libraries.</Description>
+    <PackageTags>aspnet templates blazor spa</PackageTags>
+    <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/jsakamoto/BlazorMinimumTemplates</PackageProjectUrl>
+
+    <!-- Keep package type as 'Template' to show the package as a template package on nuget.org and make your template available in dotnet new search.-->
+    <PackageType>Template</PackageType>
+    <TargetFramework>net8.0</TargetFramework>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>/</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>nupkg-icon.png</PackageIcon>
+    <PackageReleaseNotes>(Please write the package release notes in "RELEASE NOTES.txt".)</PackageReleaseNotes>
+    <PackageOutputPath>.\dist\</PackageOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <LocalizeTemplates>false</LocalizeTemplates>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.TemplateEngine.Tasks" Version="*" PrivateAssets="all" IsImplicitlyDefined="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Content\**\*" TargetPath="%(RecursiveDir)%(Filename)%(Extension)" Exclude="**\obj\**\*.*;**\bin\**\*.*;**\.vs\**\*.*;**\.vscode\**\*.*;**\*.suo;**\*.user" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+    <None Include=".assets\nupkg-icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <Target Name="PreparePackageReleaseNotesFromFile" BeforeTargets="GenerateNuspec">
+    <ReadLinesFromFile File="./RELEASE-NOTES.txt">
+      <Output TaskParameter="Lines" ItemName="ReleaseNoteLines" />
+    </ReadLinesFromFile>
+    <PropertyGroup>
+      <PackageReleaseNotes>@(ReleaseNoteLines, '%0a');v.0.0</PackageReleaseNotes>
+      <PackageReleaseNotes>$(PackageReleaseNotes.Replace('&lt;','&amp;lt;'))</PackageReleaseNotes>
+      <PackageReleaseNotes>$(PackageReleaseNotes.Replace('&gt;','&amp;gt;'))</PackageReleaseNotes>
+      <PackageReleaseNotes>$([System.Text.RegularExpressions.Regex]::Match($(PackageReleaseNotes), "^(v\.[\d\.]+.+?)v\.[\d\.]+", System.Text.RegularExpressions.RegexOptions.Singleline).Groups[1].Value)</PackageReleaseNotes>
+      <PackageReleaseNotes>$(PackageReleaseNotes)%0aTo see all the change logs, please visit the following URL.%0a- $(PackageProjectUrl)/blob/master/RELEASE-NOTES.txt</PackageReleaseNotes>
+    </PropertyGroup>
+  </Target>
+
+</Project>
