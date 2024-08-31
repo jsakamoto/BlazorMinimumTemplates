@@ -20,7 +20,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 #endif
-#if (Framework == "net8.0")
+#if (Framework == "net6.0" || Framework == "net7.0" || Framework == "net8.0")
 app.UseStaticFiles();
 #else
 app.MapStaticAssets();
