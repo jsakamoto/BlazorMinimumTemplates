@@ -9,6 +9,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="~/" />
+@*#if (Framework != "net7.0" && Framework != "net8.0")*@
+    <script type="importmap"></script>
+@*#endif*@
     <link rel="stylesheet" href="css/blazor-ui.css" asp-append-version="true" />
     <link rel="stylesheet" href="BlazorServerMin.styles.css" asp-append-version="true" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />

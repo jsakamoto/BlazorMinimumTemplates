@@ -7,6 +7,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
+@*#if (Framework != "net8.0")*@
+    <ImportMap />
+@*#endif*@
 @*#if (Interactivity != "None" && Framework == "net8.0")*@
     <link rel="stylesheet" href="css/blazor-ui.css" />
 @*#endif*@
@@ -21,11 +24,11 @@
 @*#if (Interactivity == "None")*@
     <HeadOutlet />
 @*#elif (Interactivity == "Server")*@
-    <HeadOutlet @rendermode="@InteractiveServer"/>
+    <HeadOutlet @rendermode="@InteractiveServer" />
 @*#elif (Interactivity == "WebAssembly")*@
-    <HeadOutlet @rendermode="@InteractiveWebAssembly"/>
+    <HeadOutlet @rendermode="@InteractiveWebAssembly" />
 @*#elif (Interactivity == "Auto")*@
-    <HeadOutlet @rendermode="@InteractiveAuto"/>
+    <HeadOutlet @rendermode="@InteractiveAuto" />
 @*#endif*@
 </head>
 <body>
@@ -33,11 +36,11 @@
 @*#if (Interactivity == "None")*@
     <Routes />
 @*#elif (Interactivity == "Server")*@
-    <Routes @rendermode="@InteractiveServer"/>
+    <Routes @rendermode="@InteractiveServer" />
 @*#elif (Interactivity == "WebAssembly")*@
-    <Routes @rendermode="@InteractiveWebAssembly"/>
+    <Routes @rendermode="@InteractiveWebAssembly" />
 @*#elif (Interactivity == "Auto")*@
-    <Routes @rendermode="@InteractiveAuto"/>
+    <Routes @rendermode="@InteractiveAuto" />
 @*#endif*@
 @*#elif (Layout)*@
 @*#if (Interactivity == "None")*@
@@ -45,21 +48,21 @@
         <Home />
     </LayoutView>
 @*#elif (Interactivity == "Server")*@
-    <LayoutRoot @rendermode="@InteractiveServer"/>
+    <LayoutRoot @rendermode="@InteractiveServer" />
 @*#elif (Interactivity == "WebAssembly")*@
-    <LayoutRoot @rendermode="@InteractiveWebAssembly"/>
+    <LayoutRoot @rendermode="@InteractiveWebAssembly" />
 @*#elif (Interactivity == "Auto")*@
-    <LayoutRoot @rendermode="@InteractiveAuto"/>
+    <LayoutRoot @rendermode="@InteractiveAuto" />
 @*#endif*@
 @*#else*@
 @*#if (Interactivity == "None")*@
     <Home />
 @*#elif (Interactivity == "Server")*@
-    <Home @rendermode="@InteractiveServer"/>
+    <Home @rendermode="@InteractiveServer" />
 @*#elif (Interactivity == "WebAssembly")*@
-    <Home @rendermode="@InteractiveWebAssembly"/>
+    <Home @rendermode="@InteractiveWebAssembly" />
 @*#elif (Interactivity == "Auto")*@
-    <Home @rendermode="@InteractiveAuto"/>
+    <Home @rendermode="@InteractiveAuto" />
 @*#endif*@
 @*#endif*@
 @*#if (!Layout && (Interactivity != "None"))*@
