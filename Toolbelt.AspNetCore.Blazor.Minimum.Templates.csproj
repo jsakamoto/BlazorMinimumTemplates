@@ -26,6 +26,7 @@
     <PackageIcon>nupkg-icon.png</PackageIcon>
     <PackageReleaseNotes>(Please write the package release notes in "RELEASE NOTES.txt".)</PackageReleaseNotes>
     <PackageOutputPath>.\dist\</PackageOutputPath>
+    <PackageFullPath>$(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg</PackageFullPath>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -45,6 +46,10 @@
     <None Include="README.md" Pack="true" PackagePath="" />
     <None Include=".assets\nupkg-icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
+
+  <Target Name="_DeleteOldFile" BeforeTargets="GenerateNuspec">
+    <Delete Files="$(PackageFullPath)" />
+  </Target>
 
   <Target Name="PreparePackageReleaseNotesFromFile" BeforeTargets="GenerateNuspec">
     <ReadLinesFromFile File="./RELEASE-NOTES.txt">
