@@ -1,3 +1,6 @@
+v.9.0.100-preview.7.2
+- Fix: The generated project for .NET 6 could not be built.
+
 v.9.0.100-preview.7.1
 - Improve: Use "MapStaticAssets" instead of "UseStaticWebAssets" in the Startup.cs when the project is targeting the .NET 9.
 
