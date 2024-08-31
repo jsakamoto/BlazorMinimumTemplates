@@ -7,12 +7,19 @@
     <RootNamespace>Toolbelt.AspNetCore.Blazor.Minimum.Templates.Test</RootNamespace>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    <PrepareForBuildDependsOn>$(PrepareForBuildDependsOn);_GenerateVersionInfoClass</PrepareForBuildDependsOn>
   </PropertyGroup>
+
+  <Import Project="..\Version.props" />
+
+  <ItemGroup>
+    <Using Include="NUnit.Framework" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ChainingAssertion-NUnit.Bin" Version="4.0.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
-    <PackageReference Include="NUnit" Version="4.1.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
+    <PackageReference Include="NUnit" Version="4.2.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
     <PackageReference Include="NUnit.Analyzers" Version="4.3.0">
       <PrivateAssets>all</PrivateAssets>
@@ -25,5 +32,16 @@
     <PackageReference Include="Toolbelt.WorkDirectory" Version="1.0.0" />
     <PackageReference Include="XProcess" Version="1.4.0" />
   </ItemGroup>
+
+  <Target Name="_GenerateVersionInfoClass" Inputs="..\Version.props" Outputs="VersionInfo.cs">
+    <ItemGroup>
+      <VersionInfoLines Include="namespace $(RootNamespace)%3b"/>
+      <VersionInfoLines Include="internal static class VersionInfo"/>
+      <VersionInfoLines Include="{"/>
+      <VersionInfoLines Include="%20%20%20%20internal const string VersionText = &quot;$(Version)&quot;%3b"/>
+      <VersionInfoLines Include="}"/>
+    </ItemGroup>
+    <WriteLinesToFile File="VersionInfo.cs" Overwrite="true" Lines="@(VersionInfoLines)"></WriteLinesToFile>
+  </Target>
 
 </Project>
