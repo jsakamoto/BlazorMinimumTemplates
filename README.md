@@ -69,7 +69,7 @@ You can see all the options for these project templates with the `--help` option
 option | description
 -------|-----------------
 `--no-restore`    | If specified, skips the automatic restore of the project on create.
-`-f`, `--framework` {`net6.0`, `net7.0`, or `net8.0`} |  The target framework for the project.
+`-f`, `--framework` {`net6.0`, `net7.0`, `net8.0`, or `net9.0`} |  The target framework for the project.
 `--no-https`      | Whether to turn off HTTPS.
 `-ho`, `--hosted` | **[Blazor WebAssembly Only]** If specified, includes an ASP.NET Core host for the Blazor WebAssembly app.
 `-r`, `--routing` | If specified, enables routing for the Blazor app.
