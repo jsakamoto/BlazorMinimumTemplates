@@ -1,3 +1,6 @@
+v.9.0.100-rc.1
+- Update: Updated the referenced packages to 9.0.0 Release Candidate 1.
+
 v.9.0.100-preview.7.3
 - Improve: Add an "importmap" script tag in a fallback page on .NET 9.
 
