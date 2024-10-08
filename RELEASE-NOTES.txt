@@ -1,3 +1,6 @@
+v.9.0.100-rc.2
+- Update: Updated the referenced packages to 9.0.0 Release Candidate 2, 8.0.10, and 6.0.35.
+
 v.9.0.100-rc.1
 - Update: Updated the referenced packages to 9.0.0 Release Candidate 1.
 
