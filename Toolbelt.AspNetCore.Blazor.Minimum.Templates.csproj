@@ -13,6 +13,7 @@
     <PackageTags>aspnet templates blazor spa</PackageTags>
     <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/jsakamoto/BlazorMinimumTemplates</PackageProjectUrl>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
 
     <!-- Keep package type as 'Template' to show the package as a template package on nuget.org and make your template available in dotnet new search.-->
     <PackageType>Template</PackageType>
