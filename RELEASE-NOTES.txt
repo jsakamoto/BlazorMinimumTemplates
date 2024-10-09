@@ -25,6 +25,9 @@ v.9.0.100-preview.4
 v.9.0.100-preview.3
 - Update: Add support for .NET 9.0 preview.
 
+v.8.0.403
+- Update: Updated the referenced packages to 8.0.10, and 6.0.35.
+
 v.8.0.400.1
 - Improve: Make Blazor Server fallback Razor pages single on .NET7 or later.
 
