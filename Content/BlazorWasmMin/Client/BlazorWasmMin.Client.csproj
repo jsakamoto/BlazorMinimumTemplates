@@ -10,20 +10,20 @@
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(Framework)' == 'net6.0' ">
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.35" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.35" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.36" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.36" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Framework)' == 'net7.0' ">
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.20" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.20" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Framework)' == 'net8.0' ">
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.10" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.10" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.11" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Framework)' == 'net9.0' ">
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.0-rc.2.*" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.0-rc.2.*" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.0" PrivateAssets="all" />
   </ItemGroup>
 
   <!--#if Hosted -->
