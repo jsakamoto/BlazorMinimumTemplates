@@ -12,7 +12,7 @@ public class BlazorServerMinTests
     {
         return from useRouting in new[] { RoutingOptions.NoRouting, RoutingOptions.Routing, }
                from useLayout in new[] { LayoutOptions.NoLayout, LayoutOptions.Layout }
-               from framework in new[] { TargetFramework.Net6, TargetFramework.Net8 }
+               from framework in new[] { TargetFramework.Net6, TargetFramework.Net8, TargetFramework.Net9 }
                select new object[] { useRouting, useLayout, framework };
     }
 

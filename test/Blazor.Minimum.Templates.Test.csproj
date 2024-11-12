@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>Toolbelt.AspNetCore.Blazor.Minimum.Templates.Test</RootNamespace>
@@ -18,8 +18,8 @@
 
   <ItemGroup>
     <PackageReference Include="ChainingAssertion-NUnit.Bin" Version="4.0.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
-    <PackageReference Include="NUnit" Version="4.2.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="NUnit" Version="4.2.2" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
     <PackageReference Include="NUnit.Analyzers" Version="4.3.0">
       <PrivateAssets>all</PrivateAssets>
@@ -35,11 +35,11 @@
 
   <Target Name="_GenerateVersionInfoClass" Inputs="..\Version.props" Outputs="VersionInfo.cs">
     <ItemGroup>
-      <VersionInfoLines Include="namespace $(RootNamespace)%3b"/>
-      <VersionInfoLines Include="internal static class VersionInfo"/>
-      <VersionInfoLines Include="{"/>
-      <VersionInfoLines Include="%20%20%20%20internal const string VersionText = &quot;$(Version)&quot;%3b"/>
-      <VersionInfoLines Include="}"/>
+      <VersionInfoLines Include="namespace $(RootNamespace)%3b" />
+      <VersionInfoLines Include="internal static class VersionInfo" />
+      <VersionInfoLines Include="{" />
+      <VersionInfoLines Include="%20%20%20%20internal const string VersionText = &quot;$(Version)&quot;%3b" />
+      <VersionInfoLines Include="}" />
     </ItemGroup>
     <WriteLinesToFile File="VersionInfo.cs" Overwrite="true" Lines="@(VersionInfoLines)"></WriteLinesToFile>
   </Target>

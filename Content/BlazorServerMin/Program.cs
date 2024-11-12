@@ -20,11 +20,18 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 #endif
+#if (Framework == "net6.0" || Framework == "net7.0" || Framework == "net8.0")
 app.UseStaticFiles();
+#else
+app.MapStaticAssets();
+#endif
 
 app.UseRouting();
 
 app.MapBlazorHub();
+#if (Framework != "net6.0" && Framework != "net7.0" && Framework != "net8.0")
+app.MapRazorPages().WithStaticAssets();
+#endif
 app.MapFallbackToPage("/_Host");
 
 app.Run();

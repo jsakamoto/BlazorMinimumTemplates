@@ -44,7 +44,11 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 #endif
+#if (Framework == "net8.0")
 app.UseStaticFiles();
+#else
+app.MapStaticAssets();
+#endif
 app.UseAntiforgery();
 
 #if (Interactivity == "None")

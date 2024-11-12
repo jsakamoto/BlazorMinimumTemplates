@@ -28,6 +28,7 @@
     <PackageReleaseNotes>(Please write the package release notes in "RELEASE NOTES.txt".)</PackageReleaseNotes>
     <PackageOutputPath>.\dist\</PackageOutputPath>
     <PackageFullPath>$(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg</PackageFullPath>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
   </PropertyGroup>
 
   <PropertyGroup>
