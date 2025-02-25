@@ -36,24 +36,28 @@
       "datatype": "choice",
       "choices": [
         {
-          "choice": "net6.0",
-          "description": "Target net60"
-        },
-        {
-          "choice": "net7.0",
-          "description": "Target net70"
-        },
-        {
-          "choice": "net8.0",
-          "description": "Target net80"
+          "choice": "net10.0",
+          "description": "Target net10.0"
         },
         {
           "choice": "net9.0",
-          "description": "Target net90"
+          "description": "Target net9.0"
+        },
+        {
+          "choice": "net8.0",
+          "description": "Target net8.0"
+        },
+        {
+          "choice": "net7.0",
+          "description": "Target net7.0"
+        },
+        {
+          "choice": "net6.0",
+          "description": "Target net6.0"
         }
       ],
       "replaces": "net7.0",
-      "defaultValue": "net8.0"
+      "defaultValue": "net10.0"
     },
     "kestrelHttpPort": {
       "type": "parameter",

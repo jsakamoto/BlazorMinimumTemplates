@@ -18,20 +18,20 @@ When you run this project, you will see the following page on a web browser.
 
 ## System requirement
 
-- [.NET SDK](https://dotnet.microsoft.com/download/dotnet/) ver.6, 7, 8, 9 or later
+- [.NET SDK](https://dotnet.microsoft.com/download/dotnet/) ver.6, 7, 8, 9, 10 or later
 
 ## How to install
 
 If you use .NET SDK **ver.7 or later**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new install Toolbelt.AspNetCore.Blazor.Minimum.Templates::9.0.103
+> dotnet new install Toolbelt.AspNetCore.Blazor.Minimum.Templates::10.0.100-preview.1
 ```
 
 If you use .NET SDK **ver.6**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::9.0.103
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::10.0.100-preview.1
 ```
 
 ## How to use

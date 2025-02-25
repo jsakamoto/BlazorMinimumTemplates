@@ -13,7 +13,7 @@ public class BlazorMinTests
         return from interactiveMode in new[] { InteractiveMode.None, InteractiveMode.Server, InteractiveMode.WebAssembly, InteractiveMode.Auto }
                from useRouting in new[] { RoutingOptions.NoRouting, RoutingOptions.Routing, }
                from useLayout in new[] { LayoutOptions.NoLayout, LayoutOptions.Layout }
-               from framework in new[] { TargetFramework.Net8, TargetFramework.Net9 }
+               from framework in new[] { TargetFramework.Net8, TargetFramework.Net9, TargetFramework.Net10 }
                select new object[] { interactiveMode, useRouting, useLayout, framework };
     }
 
