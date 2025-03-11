@@ -1,6 +1,9 @@
 v.10.0.100-preview.1
 - Update: Add support for .NET 10.0 preview.
 
+v.9.0.201
+- Update: Updated the referenced packages to 9.0.3 and 8.0.14.
+
 v.9.0.103
 - Update: Updated the referenced packages to 9.0.2 and 8.0.13.
 
