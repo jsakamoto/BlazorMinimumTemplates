@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Server\BlazorWasmMin.Server.csproj" />
+  <Project Path="Client\BlazorWasmMin.Client.csproj" />
+  <Project Path="Shared\BlazorWasmMin.Shared.csproj" />
+</Solution>

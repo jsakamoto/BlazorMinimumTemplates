@@ -166,6 +166,12 @@
       "datatype": "bool",
       "defaultValue": "false",
       "description": "If specified, adds a solution file for the standalone Blazor Server app."
+    },
+    "SolutionX": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "If specified, adds an XML solution file for the standalone Blazor Web app."
     }
   },
   "guids": [
@@ -184,9 +190,15 @@
       ],
       "modifiers": [
         {
-          "condition": "(!Solution || (HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\"))",
+          "condition": "(!Solution || SolutionX || (HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\"))",
           "exclude": [
             "*.sln"
+          ]
+        },
+        {
+          "condition": "(!SolutionX || (HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\"))",
+          "exclude": [
+            "*.slnx"
           ]
         },
         {
@@ -241,11 +253,15 @@
       "path": "BlazorServerMin.csproj"
     },
     {
-      "condition": "(Solution && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+      "condition": "(Solution && !SolutionX && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
       "path": "BlazorServerMin.sln"
     },
     {
-      "condition": "(!Solution && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+      "condition": "(SolutionX && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+      "path": "BlazorServerMin.slnx"
+    },
+    {
+      "condition": "(!Solution && !SolutionX && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
       "path": "BlazorServerMin.csproj"
     }
   ],

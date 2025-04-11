@@ -76,6 +76,7 @@ option | description
 `--layout` | If specified, enables shared layout for the Blazor app.
 `-int`, `--interactivity` {`none`, `server`, `webassembly`, or `auto`}    | **[Blazor Web app only]** Chooses which interactive render mode to use for interactive components. (The default value is `none`) 
 `-s`, `--solution` | **[.NET CLI only]** If specified, adds a solution file for the standalone Blazor WebAssembly or Blazor Server app.
+`-sx`, `--solutionx` | **[.NET CLI only]** If specified, adds an XML solution file for the standalone Blazor WebAssembly or Blazor Server app.
 
 For example, if you want an ASP.NET Core hosted Blazor WebAssembly app project, please specify the `--hosted` switch.
 

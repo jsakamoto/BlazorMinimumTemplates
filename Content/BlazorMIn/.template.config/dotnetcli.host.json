@@ -23,6 +23,10 @@
     "Solution": {
       "longName": "solution"
     },
+    "SolutionX": {
+      "longName": "solutionx",
+      "shortName": "sx"
+    },
     "kestrelHttpPort": {
       "isHidden": true
     },
