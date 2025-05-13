@@ -1,3 +1,6 @@
+v.10.0.100-preview.4
+- Update: Updated the referenced packages to 10.0.0-preview.4
+
 v.10.0.100-preview.3
 - Update: Updated the referenced packages to 10.0.0-preview.3
 - Update: Added a new option to generate a new XML solution file
