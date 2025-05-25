@@ -7,6 +7,9 @@
     <!--#if Hosted -->
     <AssemblyName Condition="'$(name)' != '$(name{-VALUE-FORMS-}safe_namespace)'">$(AssemblyName.Replace(' ', '_'))</AssemblyName>
     <!--#endif -->
+    <!--#if (Framework != 'net6.0' && Framework != 'net7.0' && Framework != 'net8.0' && Framework != 'net9.0') -->
+    <OverrideHtmlAssetPlaceholders>true</OverrideHtmlAssetPlaceholders>
+    <!--#endif -->
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(Framework)' == 'net6.0' ">
