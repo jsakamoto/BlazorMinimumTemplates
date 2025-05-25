@@ -14,7 +14,7 @@ The Blazor application project created by these templates contains only the mini
 
 When you run this project, you will see the following page on a web browser.
 
-![fig.2](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.2/fig-002.png)
+![fig.2](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.4/fig-002.png)
 
 ## System requirement
 
