@@ -1,3 +1,6 @@
+v.10.0.100-preview.6
+- Update: Updated the referenced packages to 10.0.0-preview.6
+
 v.10.0.100-preview.5.1
 - Update: Updated the referenced packages to 10.0.0-preview.5
 
