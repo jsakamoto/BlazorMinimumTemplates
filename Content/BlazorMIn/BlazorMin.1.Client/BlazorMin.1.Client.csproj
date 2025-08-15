@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
     <StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
+    <BlazorDisableThrowNavigationException Condition=" '$(Framework)' == 'net10.0' ">true</BlazorDisableThrowNavigationException>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(Framework)' == 'net8.0' ">

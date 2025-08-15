@@ -179,6 +179,14 @@
       "datatype": "bool",
       "defaultValue": "false",
       "description": "If specified, adds an XML solution file for the standalone Blazor Web app."
+    },
+    "LocalhostTld": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "displayName": "Use the .dev.localhost TLD in the application URL",
+      "description": "Whether to combine the project name with the .dev.localhost TLD in the application URL for local development, e.g. https://myapp.dev.localhost:12345.",
+      "isEnabled": "(Framework == \"net10.0\")"
     }
   },
   "guids": [
@@ -187,7 +195,7 @@
     "0341B023-80E5-4FEA-B58E-CD70D1D432EC",
     "12616DCF-E921-48CA-A211-A262FA10D5E9"
   ],
-  "sourceName": "BlazorWasmMin",
+  "sourceName": "BlazorWasmMin.1",
   "sources": [
     {
       "source": "./",
@@ -202,8 +210,8 @@
           "exclude": [
             "Server/**",
             "Shared/**",
-            "BlazorWasmMin.sln",
-            "BlazorWasmMin.slnx"
+            "BlazorWasmMin.1.sln",
+            "BlazorWasmMin.1.slnx"
           ],
           "rename": {
             ".Client.csproj": ".csproj",
@@ -215,32 +223,32 @@
         {
           "condition": "(!Hosted && !Solution) || SolutionX",
           "exclude": [
-            "Client/BlazorWasmMin.Client.sln"
+            "Client/BlazorWasmMin.1.Client.sln"
           ]
         },
         {
           "condition": "(!Hosted && !SolutionX)",
           "exclude": [
-            "Client/BlazorWasmMin.Client.slnx"
+            "Client/BlazorWasmMin.1.Client.slnx"
           ]
         },
         {
           "condition": "(Hosted)",
           "exclude": [
-            "Client/BlazorWasmMin.Client.sln",
-            "Client/BlazorWasmMin.Client.slnx"
+            "Client/BlazorWasmMin.1.Client.sln",
+            "Client/BlazorWasmMin.1.Client.slnx"
           ]
         },
         {
           "condition": "(Hosted && SolutionX)",
           "exclude": [
-            "BlazorWasmMin.sln"
+            "BlazorWasmMin.1.sln"
           ]
         },
         {
           "condition": "(Hosted && !SolutionX)",
           "exclude": [
-            "BlazorWasmMin.slnx"
+            "BlazorWasmMin.1.slnx"
           ]
         },
         {
@@ -297,27 +305,27 @@
   "primaryOutputs": [
     {
       "condition": "(Hosted && !SolutionX && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
-      "path": "BlazorWasmMin.sln"
+      "path": "BlazorWasmMin.1.sln"
     },
     {
       "condition": "(Hosted && SolutionX && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
-      "path": "BlazorWasmMin.slnx"
+      "path": "BlazorWasmMin.1.slnx"
     },
     {
       "condition": "(Hosted && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "path": "Server/BlazorWasmMin.Server.csproj"
+      "path": "Server/BlazorWasmMin.1.Server.csproj"
     },
     {
       "condition": "(!Hosted)",
-      "path": "BlazorWasmMin.Client.csproj"
+      "path": "BlazorWasmMin.1.Client.csproj"
     },
     {
       "condition": "(Hosted && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "path": "Client/BlazorWasmMin.Client.csproj"
+      "path": "Client/BlazorWasmMin.1.Client.csproj"
     },
     {
       "condition": "(Hosted && HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "path": "Shared/BlazorWasmMin.Shared.csproj"
+      "path": "Shared/BlazorWasmMin.1.Shared.csproj"
     }
   ],
   "postActions": [
@@ -342,7 +350,7 @@
       ],
       "args": {
         "files": [
-          "BlazorWasmMin.Client.csproj"
+          "BlazorWasmMin.1.Client.csproj"
         ]
       },
       "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",

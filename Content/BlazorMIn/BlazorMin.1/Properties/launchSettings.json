@@ -5,9 +5,11 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
+      //#if (UseWebAssembly)
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+      //#endif
       //#if (LocalhostTld)
-      "applicationUrl": "http://blazorwasmmin__1.dev.localhost:5000",
+      "applicationUrl": "http://blazormin__1.dev.localhost:5000",
       //#else
       "applicationUrl": "http://localhost:5000",
       //#endif
@@ -20,9 +22,11 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
+      //#if (UseWebAssembly)
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+      //#endif
       //#if (LocalhostTld)
-      "applicationUrl": "https://blazorwasmmin__1.dev.localhost:5001;http://blazorwasmmin__1.dev.localhost:5000",
+      "applicationUrl": "https://blazormin__1.dev.localhost:5001;http://blazormin__1.dev.localhost:5000",
       //#else
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       //#endif
@@ -31,5 +35,4 @@
       }
     }
     //#endif
-  }
 }

@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\BlazorWasmMin.Client.csproj" />
-    <ProjectReference Include="..\Shared\BlazorWasmMin.Shared.csproj" />
+    <ProjectReference Include="..\Client\BlazorWasmMin.1.Client.csproj" />
+    <ProjectReference Include="..\Shared\BlazorWasmMin.1.Shared.csproj" />
   </ItemGroup>
 
 </Project>

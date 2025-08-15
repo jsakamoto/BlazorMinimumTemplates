@@ -1,7 +1,7 @@
 ﻿#if (Hosted)
-using BlazorWasmMin.Client;
+using BlazorWasmMin._1.Client;
 #else
-using BlazorWasmMin;
+using BlazorWasmMin._1;
 #endif
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;

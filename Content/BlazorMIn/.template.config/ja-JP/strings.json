@@ -8,6 +8,7 @@
     "parameter.UseWebAssembly.name": "対話型 WebAssembly サーバー コンポーネントを使用する(_U)",
     "parameter.UseWebAssembly.description": "指定した場合、WebAssembly を使用してブラウザーでコンポーネントを対話的にレンダリングするようにプロジェクトを構成します。",
     "parameter.Routing.name": "ルーティングを有効化(_R)",
-    "parameter.Layout.name": "共通レイアウトを有効化(_L)"
+    "parameter.Layout.name": "共通レイアウトを有効化(_L)",
+    "parameter.LocalhostTld.name": "アプリケーション URL に .dev.localhost TLD を使用する"
   }
 }

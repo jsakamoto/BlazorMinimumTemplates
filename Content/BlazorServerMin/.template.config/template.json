@@ -172,12 +172,20 @@
       "datatype": "bool",
       "defaultValue": "false",
       "description": "If specified, adds an XML solution file for the standalone Blazor Web app."
+    },
+    "LocalhostTld": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "displayName": "Use the .dev.localhost TLD in the application URL",
+      "description": "Whether to combine the project name with the .dev.localhost TLD in the application URL for local development, e.g. https://myapp.dev.localhost:12345.",
+      "isEnabled": "(Framework == \"net10.0\")"
     }
   },
   "guids": [
     "A34DA4F5-B21D-4757-BD8B-A03D34D209E2"
   ],
-  "sourceName": "BlazorServerMin",
+  "sourceName": "BlazorServerMin.1",
   "sources": [
     {
       "source": "./",
@@ -250,19 +258,19 @@
   "primaryOutputs": [
     {
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "path": "BlazorServerMin.csproj"
+      "path": "BlazorServerMin.1.csproj"
     },
     {
       "condition": "(Solution && !SolutionX && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
-      "path": "BlazorServerMin.sln"
+      "path": "BlazorServerMin.1.sln"
     },
     {
       "condition": "(SolutionX && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
-      "path": "BlazorServerMin.slnx"
+      "path": "BlazorServerMin.1.slnx"
     },
     {
       "condition": "(!Solution && !SolutionX && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
-      "path": "BlazorServerMin.csproj"
+      "path": "BlazorServerMin.1.csproj"
     }
   ],
   "postActions": [

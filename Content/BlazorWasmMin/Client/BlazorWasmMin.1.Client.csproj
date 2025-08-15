@@ -35,7 +35,7 @@
 
   <!--#if Hosted -->
   <ItemGroup>
-    <ProjectReference Include="..\Shared\BlazorWasmMin.Shared.csproj" />
+    <ProjectReference Include="..\Shared\BlazorWasmMin.1.Shared.csproj" />
   </ItemGroup>
 
   <!--#endif -->
