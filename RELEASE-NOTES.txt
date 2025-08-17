@@ -1,4 +1,4 @@
-v.10.0.100-preview.7.1
+v.10.0.100-preview.7.2
 - Enhancement: Added support for the .dev.localhost TLD in application URLs
 
 v.10.0.100-preview.7
