@@ -301,7 +301,7 @@
             "BlazorMin.1.slnx"
           ],
           "rename": {
-            "BlazorMin/": ""
+            "BlazorMin.1/": ""
           }
         }
       ]
