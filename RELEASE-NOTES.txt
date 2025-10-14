@@ -1,3 +1,6 @@
+v.9.0.306
+- Update: Updated the referenced packages to 9.0.10 and 8.0.21.
+
 v.9.0.305
 - Update: Updated the referenced packages to 9.0.9 and 8.0.20.
 
