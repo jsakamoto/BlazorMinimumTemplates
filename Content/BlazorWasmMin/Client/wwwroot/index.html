@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlazorWasmMin</title>
     <base href="/" />
+<!--#if (Framework != 'net6.0' && Framework != 'net7.0' && Framework != 'net8.0' && Framework != 'net9.0') -->
+    <link rel="preload" id="webassembly" />
+<!--#endif -->
     <link rel="stylesheet" href="css/blazor-ui.css" />
 <!--#if (Hosted)  -->
-    <link rel="stylesheet" href="BlazorWasmMin.Client.styles.css" />
+    <link rel="stylesheet" href="BlazorWasmMin.1.Client.styles.css" />
 <!--#else  -->
-    <link rel="stylesheet" href="BlazorWasmMin.styles.css" />
+    <link rel="stylesheet" href="BlazorWasmMin.1.styles.css" />
 <!--#endif  -->
+<!--#if (Framework != 'net6.0' && Framework != 'net7.0' && Framework != 'net8.0' && Framework != 'net9.0') -->
+    <script type="importmap"></script>
+<!--#endif -->
 </head>
 
 <body>
@@ -33,7 +39,11 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+<!--#if (Framework != 'net6.0' && Framework != 'net7.0' && Framework != 'net8.0' && Framework != 'net9.0') -->
+    <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
+<!--#else -->
     <script src="_framework/blazor.webassembly.js"></script>
+<!--#endif -->
 </body>
 
 </html>

@@ -23,6 +23,14 @@
     "Solution": {
       "longName": "solution"
     },
+    "SolutionX": {
+      "longName": "solutionx",
+      "shortName": "sx"
+    },
+    "LocalhostTld": {
+      "longName": "localhost-tld",
+      "shortName": ""
+    },
     "kestrelHttpPort": {
       "isHidden": true
     },

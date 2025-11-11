@@ -1,7 +1,7 @@
 #if (Interactivity == "WebAssembly" || Interactivity == "Auto")
-using BlazorMin.Client.Pages;
+using BlazorMin.1.Client.Pages;
 #endif
-using BlazorMin.Components;
+using BlazorMin.1.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -34,6 +34,12 @@
         "text": "Enable shared _layout"
       },
       "isVisible": true
+    },
+    {
+      "id": "LocalhostTld",
+      "isVisible": true,
+      "persistenceScope": "shared",
+      "persistenceScopeName": "Microsoft"
     }
   ]
 }

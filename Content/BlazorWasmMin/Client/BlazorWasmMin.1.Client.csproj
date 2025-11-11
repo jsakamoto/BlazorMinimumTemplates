@@ -7,6 +7,9 @@
     <!--#if Hosted -->
     <AssemblyName Condition="'$(name)' != '$(name{-VALUE-FORMS-}safe_namespace)'">$(AssemblyName.Replace(' ', '_'))</AssemblyName>
     <!--#endif -->
+    <!--#if (Framework != 'net6.0' && Framework != 'net7.0' && Framework != 'net8.0' && Framework != 'net9.0') -->
+    <OverrideHtmlAssetPlaceholders>true</OverrideHtmlAssetPlaceholders>
+    <!--#endif -->
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(Framework)' == 'net6.0' ">
@@ -25,10 +28,14 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.10" PrivateAssets="all" />
   </ItemGroup>
+  <ItemGroup Condition=" '$(Framework)' == 'net10.0' ">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.0-rc.2.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.0-rc.2.*" PrivateAssets="all" />
+  </ItemGroup>
 
   <!--#if Hosted -->
   <ItemGroup>
-    <ProjectReference Include="..\Shared\BlazorWasmMin.Shared.csproj" />
+    <ProjectReference Include="..\Shared\BlazorWasmMin.1.Shared.csproj" />
   </ItemGroup>
 
   <!--#endif -->

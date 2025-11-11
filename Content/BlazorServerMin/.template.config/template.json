@@ -36,24 +36,28 @@
       "datatype": "choice",
       "choices": [
         {
-          "choice": "net6.0",
-          "description": "Target net60"
-        },
-        {
-          "choice": "net7.0",
-          "description": "Target net70"
-        },
-        {
-          "choice": "net8.0",
-          "description": "Target net80"
+          "choice": "net10.0",
+          "description": "Target net10.0"
         },
         {
           "choice": "net9.0",
-          "description": "Target net90"
+          "description": "Target net9.0"
+        },
+        {
+          "choice": "net8.0",
+          "description": "Target net8.0"
+        },
+        {
+          "choice": "net7.0",
+          "description": "Target net7.0"
+        },
+        {
+          "choice": "net6.0",
+          "description": "Target net6.0"
         }
       ],
       "replaces": "net7.0",
-      "defaultValue": "net8.0"
+      "defaultValue": "net10.0"
     },
     "kestrelHttpPort": {
       "type": "parameter",
@@ -162,12 +166,26 @@
       "datatype": "bool",
       "defaultValue": "false",
       "description": "If specified, adds a solution file for the standalone Blazor Server app."
+    },
+    "SolutionX": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "If specified, adds an XML solution file for the standalone Blazor Web app."
+    },
+    "LocalhostTld": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "displayName": "Use the .dev.localhost TLD in the application URL",
+      "description": "Whether to combine the project name with the .dev.localhost TLD in the application URL for local development, e.g. https://myapp.dev.localhost:12345.",
+      "isEnabled": "(Framework == \"net10.0\")"
     }
   },
   "guids": [
     "A34DA4F5-B21D-4757-BD8B-A03D34D209E2"
   ],
-  "sourceName": "BlazorServerMin",
+  "sourceName": "BlazorServerMin.1",
   "sources": [
     {
       "source": "./",
@@ -180,9 +198,15 @@
       ],
       "modifiers": [
         {
-          "condition": "(!Solution || (HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\"))",
+          "condition": "(!Solution || SolutionX || (HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\"))",
           "exclude": [
             "*.sln"
+          ]
+        },
+        {
+          "condition": "(!SolutionX || (HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\"))",
+          "exclude": [
+            "*.slnx"
           ]
         },
         {
@@ -234,15 +258,19 @@
   "primaryOutputs": [
     {
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "path": "BlazorServerMin.csproj"
+      "path": "BlazorServerMin.1.csproj"
     },
     {
-      "condition": "(Solution && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
-      "path": "BlazorServerMin.sln"
+      "condition": "(Solution && !SolutionX && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+      "path": "BlazorServerMin.1.sln"
     },
     {
-      "condition": "(!Solution && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
-      "path": "BlazorServerMin.csproj"
+      "condition": "(SolutionX && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+      "path": "BlazorServerMin.1.slnx"
+    },
+    {
+      "condition": "(!Solution && !SolutionX && (HostIdentifier == \"dotnetcli\" || HostIdentifier == \"dotnetcli-preview\"))",
+      "path": "BlazorServerMin.1.csproj"
     }
   ],
   "postActions": [

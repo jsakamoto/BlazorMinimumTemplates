@@ -18,10 +18,13 @@
   <ItemGroup Condition=" '$(Framework)' == 'net9.0' ">
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.10" />
   </ItemGroup>
+  <ItemGroup Condition=" '$(Framework)' == 'net10.0' ">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.0-rc.2.*" />
+  </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\BlazorWasmMin.Client.csproj" />
-    <ProjectReference Include="..\Shared\BlazorWasmMin.Shared.csproj" />
+    <ProjectReference Include="..\Client\BlazorWasmMin.1.Client.csproj" />
+    <ProjectReference Include="..\Shared\BlazorWasmMin.1.Shared.csproj" />
   </ItemGroup>
 
 </Project>

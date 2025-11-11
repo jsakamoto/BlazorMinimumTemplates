@@ -4,6 +4,7 @@
     "name": "Blazor Server アプリ (空)",
     "description": "js および css ライブラリを一切含まない、空の Blazor Server アプリを作成するためのプロジェクト テンプレート。",
     "parameter.Routing.name": "ルーティングを有効化(_R)",
-    "parameter.Layout.name": "共通レイアウトを有効化(_L)"
+    "parameter.Layout.name": "共通レイアウトを有効化(_L)",
+    "parameter.LocalhostTld.name": "アプリケーション URL に .dev.localhost TLD を使用する"
   }
 }

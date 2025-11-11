@@ -7,6 +7,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
+@*#if (Framework != "net8.0" && Framework != "net9.0")*@
+    <LinkPreload />
+@*#endif*@
 @*#if (Framework != "net8.0")*@
     <ImportMap />
 @*#endif*@
@@ -17,9 +20,9 @@
     <link rel="stylesheet" href="@Assets["css/blazor-ui.css"]" />
 @*#endif*@
 @*#if (Framework == "net8.0")*@
-    <link rel="stylesheet" href="BlazorMin.styles.css" />
+    <link rel="stylesheet" href="BlazorMin.1.styles.css" />
 @*#else*@
-    <link rel="stylesheet" href="@Assets["BlazorMin.styles.css"]" />
+    <link rel="stylesheet" href="@Assets["BlazorMin.1.styles.css"]" />
 @*#endif*@
 @*#if (Interactivity == "None")*@
     <HeadOutlet />
