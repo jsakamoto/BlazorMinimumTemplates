@@ -1,3 +1,6 @@
+v.10.0.102
+- Update: Updated the referenced packages to 8.0.23, 9.0.12, and 10.0.2.
+
 v.10.0.101.1
 - Fix: Correct component name from LinkPreload to ResourcePreloader in App.razor for a Blazor Web App project
 
