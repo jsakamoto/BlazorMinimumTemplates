@@ -1,5 +1,5 @@
 namespace Toolbelt.AspNetCore.Blazor.Minimum.Templates.Test;
 internal static class VersionInfo
 {
-    internal const string VersionText = "10.0.102";
+    internal const string VersionText = "10.0.103";
 }
