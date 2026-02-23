@@ -1,6 +1,10 @@
 v.11.0.100-preview.1
 - Update: Add support for .NET 11.0 preview.
 
+v.10.0.103.1
+- Fix: Resolved a missing closing brace in launchSettings.json of the Blazor Web App project template.
+- Fix: Resolved missing page titles in the host files of the Blazor Web App, Server, and WebAssembly project templates.
+
 v.10.0.103
 - Update: Updated the referenced packages to 8.0.24, 9.0.13, and 10.0.3.
 
