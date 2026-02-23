@@ -21,6 +21,10 @@
     <ProjectReference Include="..\BlazorMin.1.Client\BlazorMin.1.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.3" />
   </ItemGroup>
+  <ItemGroup Condition=" '$(Framework)' == 'net11.0' ">
+    <ProjectReference Include="..\BlazorMin.1.Client\BlazorMin.1.Client.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="11.0.0-preview.1.*" />
+  </ItemGroup>
   <!-- #endif -->
 
 </Project>

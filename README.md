@@ -18,20 +18,20 @@ When you run this project, you will see the following page on a web browser.
 
 ## System requirement
 
-- [.NET SDK](https://dotnet.microsoft.com/download/dotnet/) ver.6, 7, 8, 9, 10 or later
+- [.NET SDK](https://dotnet.microsoft.com/download/dotnet/) ver.6, 7, 8, 9, 10, 11 or later
 
 ## How to install
 
 If you use .NET SDK **ver.7 or later**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new install Toolbelt.AspNetCore.Blazor.Minimum.Templates::10.0.102
+> dotnet new install Toolbelt.AspNetCore.Blazor.Minimum.Templates::11.0.100-preview.1
 ```
 
 If you use .NET SDK **ver.6**, please enter the following command to install the project templates.
 
 ```shell
-> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::10.0.102
+> dotnet new -i Toolbelt.AspNetCore.Blazor.Minimum.Templates::11.0.100-preview.1
 ```
 
 ## How to use
@@ -69,7 +69,7 @@ You can see all the options for these project templates with the `--help` option
 option | description
 -------|-----------------
 `--no-restore`    | If specified, skips the automatic restore of the project on create.
-`-f`, `--framework` {`net6.0`, `net7.0`, `net8.0`, or `net9.0`} |  The target framework for the project.
+`-f`, `--framework` {`net6.0`, `net7.0`, `net8.0`, `net9.0`, `net10.0`, `net11.0`} |  The target framework for the project.
 `--no-https`      | Whether to turn off HTTPS.
 `-ho`, `--hosted` | **[Blazor WebAssembly Only]** If specified, includes an ASP.NET Core host for the Blazor WebAssembly app.
 `-r`, `--routing` | If specified, enables routing for the Blazor app.

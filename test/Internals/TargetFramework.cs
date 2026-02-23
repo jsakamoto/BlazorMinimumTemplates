@@ -1,4 +1,4 @@
-﻿namespace Toolbelt.AspNetCore.Blazor.Minimum.Templates.Test.Internals;
+namespace Toolbelt.AspNetCore.Blazor.Minimum.Templates.Test.Internals;
 
 internal static class TargetFramework
 {
@@ -6,4 +6,5 @@ internal static class TargetFramework
     public const string Net8 = "net8.0";
     public const string Net9 = "net9.0";
     public const string Net10 = "net10.0";
+    public const string Net11 = "net11.0";
 }

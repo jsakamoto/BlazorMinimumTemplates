@@ -1,4 +1,4 @@
-﻿using Toolbelt.AspNetCore.Blazor.Minimum.Templates.Test.Internals;
+using Toolbelt.AspNetCore.Blazor.Minimum.Templates.Test.Internals;
 using static Toolbelt.Diagnostics.XProcess;
 
 namespace Toolbelt.AspNetCore.Blazor.Minimum.Templates.Test;
@@ -12,7 +12,7 @@ public class BlazorWasmMinTests
     {
         return from useRouting in new[] { RoutingOptions.NoRouting, RoutingOptions.Routing, }
                from useLayout in new[] { LayoutOptions.NoLayout, LayoutOptions.Layout }
-               from framework in new[] { TargetFramework.Net8, TargetFramework.Net9, TargetFramework.Net10 }
+               from framework in new[] { TargetFramework.Net8, TargetFramework.Net9, TargetFramework.Net10, TargetFramework.Net11 }
                from solution in new[] { SolutionOptions.None, SolutionOptions.Solution, SolutionOptions.SolutionX }
                select new object[] { useRouting, useLayout, framework, solution };
     }
