@@ -10,11 +10,11 @@ This is a project templates package for **"Blazor Server"**, **"Blazor WebAssemb
 
 The Blazor application project created by these templates contains only the minimum necessary files, like this:
 
-![fig.1](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.2/fig-001.png)
+![fig.1](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.5/fig-001.png)
 
 When you run this project, you will see the following page on a web browser.
 
-![fig.2](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.4/fig-002.png)
+![fig.2](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.5/fig-002.png)
 
 ## System requirement
 
@@ -89,11 +89,11 @@ For example, if you want an ASP.NET Core hosted Blazor WebAssembly app project, 
 
 Once you've installed this project template with the `dotnet new install ...` command, you will see these project templates in your Visual Studio's "Create new project" dialog.
 
-![fig.3](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.3/fig-003.png)
+![fig.3](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.5/fig-003.png)
 
 When you proceed with creating a new project with the project template "Blazor Server App (minimal)", "Blazor WebAssembly App (minimal)", or "Blazor Web App (minimal)", you can see the "Additional Information" dialog, and you can configure some options for the Blazor app you are creating.
 
-![fig.4](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.3/fig-004.png)
+![fig.4](https://raw.githubusercontent.com/jsakamoto/BlazorMinimumTemplates/master/.assets/rev.5/fig-004.png)
 
 ## What is the difference between the empty template built-in .NET SDK?
 
