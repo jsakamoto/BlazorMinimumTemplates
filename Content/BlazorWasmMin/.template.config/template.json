@@ -168,6 +168,10 @@
       "defaultValue": "false",
       "description": "If specified, enables shared layout for the Blazor WebAssembly app."
     },
+    "IsNet9orBefore": {
+      "type": "computed",
+      "value": "(Framework == \"net6.0\" || Framework == \"net7.0\" || Framework == \"net8.0\" || Framework == \"net9.0\")"
+    },
     "Solution": {
       "type": "parameter",
       "datatype": "bool",
@@ -298,6 +302,12 @@
             "Client/App.NoRouting.razor": "Client/Pages/Index.razor",
             "Client/App.razor.css": "Client/Pages/Index.razor.css"
           }
+        },
+        {
+          "condition": "!Routing || Framework == \"net6.0\" || Framework == \"net7.0\" || Framework == \"net8.0\" || Framework == \"net9.0\"",
+          "exclude": [
+            "Client/Pages/NotFound.razor"
+          ]
         }
       ]
     }
