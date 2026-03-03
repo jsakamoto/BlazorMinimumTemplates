@@ -1,26 +1,28 @@
-﻿@*#if (Routing && Layout)
+﻿@*#if (IsNet9orBefore)*@
 <Router AppAssembly="@typeof(App).Assembly">
+@*#else*@
+<Router AppAssembly="@typeof(App).Assembly" NotFoundPage="@typeof(Pages.NotFound)" >
+@*#endif*@
     <Found Context="routeData">
+@*#if (!Layout)*@
+        <RouteView RouteData="@routeData" />
+@*#else*@
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+@*#endif*@
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
+@*#if (IsNet9orBefore && !Layout)*@
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <p role="alert">Sorry, there's nothing at this address.</p>
+    </NotFound>
+@*#endif*@
+@*#if (IsNet9orBefore && Layout)*@
     <NotFound>
         <PageTitle>Not found</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
             <p role="alert">Sorry, there's nothing at this address.</p>
         </LayoutView>
     </NotFound>
+@*#endif*@
 </Router>
-#endif*@
-@*#if (Routing && !Layout)
-<Router AppAssembly="@typeof(App).Assembly">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" />
-        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
-    </Found>
-    <NotFound>
-        <PageTitle>Not found</PageTitle>
-        <p role="alert">Sorry, there's nothing at this address.</p>
-    </NotFound>
-</Router>
-#endif*@
