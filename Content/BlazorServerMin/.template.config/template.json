@@ -165,6 +165,10 @@
       "defaultValue": "false",
       "description": "If specified, enables shared layout for the Blazor Server app."
     },
+    "IsNet9orBefore": {
+      "type": "computed",
+      "value": "(Framework == \"net6.0\" || Framework == \"net7.0\" || Framework == \"net8.0\" || Framework == \"net9.0\")"
+    },
     "Solution": {
       "type": "parameter",
       "datatype": "bool",
@@ -255,7 +259,13 @@
           "rename": {
             "Pages/_Host.Net7.cshtml": "Pages/_Host.cshtml"
           }
-        }
+        },
+        {
+          "condition": "!Routing || IsNet9orBefore",
+          "exclude": [
+            "Pages/NotFound.razor"
+          ]
+        },
       ]
     }
   ],

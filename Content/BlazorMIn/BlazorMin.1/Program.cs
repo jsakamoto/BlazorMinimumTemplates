@@ -39,7 +39,9 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 #endif
 }
-
+#if (!IsNet9orBefore)
+app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
+#endif
 #if (!NoHttps)
 app.UseHttpsRedirection();
 

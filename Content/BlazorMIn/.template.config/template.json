@@ -190,6 +190,10 @@
       "defaultValue": "false",
       "description": "If specified, enables shared layout for the Blazor Web app."
     },
+    "IsNet9orBefore": {
+      "type": "computed",
+      "value": "(Framework == \"net6.0\" || Framework == \"net7.0\" || Framework == \"net8.0\" || Framework == \"net9.0\")"
+    },
     "Solution": {
       "type": "parameter",
       "datatype": "bool",
@@ -307,6 +311,25 @@
           "rename": {
             "BlazorMin.1/": ""
           }
+        },
+        {
+          "condition": "!Routing || IsNet9orBefore",
+          "exclude": [
+            "BlazorMin.1/Components/Pages/NotFound.razor",
+            "BlazorMin.1.Client/Pages/NotFound.razor"
+          ]
+        },
+        {
+          "condition": "(Interactivity == \"None\" || Interactivity == \"Server\")",
+          "exclude": [
+            "BlazorMin.1.Client/Pages/NotFound.razor"
+          ]
+        },
+        {
+          "condition": "(Interactivity == \"WebAssembly\" || Interactivity == \"Auto\")",
+          "exclude": [
+            "BlazorMin.1/Components/Pages/NotFound.razor"
+          ]
         }
       ]
     }
