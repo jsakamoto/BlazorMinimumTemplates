@@ -1,4 +1,8 @@
+@*#if (IsNet9orBefore) *@
 <Router AppAssembly="@typeof(App).Assembly">
+@*#else*@
+<Router AppAssembly="@typeof(App).Assembly" NotFoundPage="typeof(Pages.NotFound)">
+@*#endif*@
     <Found Context="routeData">
 @*#if (Layout)*@
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(Layout.MainLayout)" />
