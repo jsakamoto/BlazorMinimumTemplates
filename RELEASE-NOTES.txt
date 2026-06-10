@@ -1,3 +1,6 @@
+v.11.0.100-preview.5
+- Update: Updated the referenced packages to 11.0.0-preview.5
+
 v.11.0.100-preview.4
 - Update: Updated the referenced packages to 11.0.0-preview.4
 
