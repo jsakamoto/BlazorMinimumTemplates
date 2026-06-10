@@ -8,6 +8,8 @@ description: Perform the new-version release work for the Blazor Minimum Templat
 This repository is the source of the NuGet package "Toolbelt.AspNetCore.Blazor.Minimum.Templates", a set of `dotnet new` project templates for Blazor.
 Whenever a new patch version of ASP.NET Core is released, a new version of this template package must be created with its referenced package versions updated. This document describes that entire procedure.
 
+> **Scope**: this skill handles **stable releases only**, and the work is done **on the `master` branch**. Make sure `master` is checked out before starting. If the user asks for a release targeting a **preview or RC version of .NET**, use the `release-new-preview-rc-version` skill instead — that work is done on a dedicated `netNN` branch.
+
 ## Versioning rules (prerequisite knowledge)
 
 - The version of this template package (the `<Version>` element in `Version.props`) must be **the same value as the version number of the latest stable .NET SDK** (e.g., if .NET SDK 10.0.301 is the latest stable, the package version is `10.0.301`).
