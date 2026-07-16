@@ -114,7 +114,22 @@ Building the `netNN.0` templates requires the preview/RC .NET SDK to be installe
 Then run `dotnet test` in the `test` folder.
 
 - This test suite builds the template package with `dotnet pack`, reinstalls it on the local machine with `dotnet new install`, and then verifies project generation, build, and execution for each combination of template × options. **It can take tens of minutes to complete**, so launch it as a background task and wait for it to finish.
-- If any test fails, do not commit; investigate the failure and report it to the user.
+
+### If some tests fail: rerun only the failed tests
+
+Test failures in this suite are sometimes flaky (e.g., nondeterministic static-web-assets build races, which are all the more likely here since a preview/RC .NET SDK is in use). When only a few tests fail, do **not** rerun the whole suite — rerun just the failed tests and see whether they pass this time.
+
+The test project runs on the Microsoft.Testing.Platform (MTP) runner (`EnableNUnitRunner`), which supports the VSTest-style `--filter` option (NOT `--treenode-filter`), passed after `--`. Test names in this suite are parameterized (e.g., `DotNetNewAndBuild_Test(Auto,NoRouting,Layout,"net11.0",Solution)`); to match one exactly with the `Name~` (contains) operator, **escape the parentheses with a backslash** — commas and double quotes need no escaping. Unescaped parentheses are silently parsed as filter-grammar grouping and match ALL tests, so never omit the escapes. Example, rerunning that one failed test (quote the filter with single quotes in PowerShell):
+
+```
+dotnet test -- --filter 'Name~DotNetNewAndBuild_Test\(Auto,NoRouting,Layout,"net11.0",Solution\)'
+```
+
+- If multiple tests failed, combine the conditions with `|`:
+  `--filter 'Name~Test_A\(...\)|Name~Test_B\(...\)'`
+- Before the actual rerun, verify the filter matches exactly the intended test case(s) with `--list-tests` (fast, runs nothing): `dotnet test -- --list-tests --filter '...'` — the discovery summary prints the matched count (a filter matching 0 tests exits with code 8). Also confirm from the rerun output that the number of executed tests equals the number of intended test cases.
+- **If all the failed tests pass on the rerun**: treat the original failures as flaky, consider the suite green, and proceed to the next step. Mention in the final report that flaky failures occurred and were cleared by a rerun.
+- **If any test fails again on the rerun**: do not commit; investigate the failure and report it to the user.
 
 ## Step 6: Commit and tag (on the `netNN` branch)
 
