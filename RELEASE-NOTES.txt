@@ -1,3 +1,6 @@
+v.10.0.400
+- Update: Updated the referenced packages to 8.0.30, 9.0.19, and 10.0.11.
+
 v.10.0.302
 - Update: Updated the referenced packages to 8.0.29, 9.0.18, and 10.0.10.
 
