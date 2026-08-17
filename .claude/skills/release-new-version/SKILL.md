@@ -1,6 +1,6 @@
 ---
 name: release-new-version
-description: Perform the new-version release work for the Blazor Minimum Templates NuGet package. Use when the user says "新バージョンに更新して", "新バージョンを作成して", "update to the new version", "release a new version", or similar. Retrieves the latest stable versions of the Microsoft.AspNetCore.Components NuGet packages and the .NET SDK, updates the package references in the templates and the version of the template package itself, runs the test suite, then commits and tags the release.
+description: Perform the new-version release work for the Blazor Minimum Templates NuGet package. Use when the user says "update to the new version", "create a new version", "release a new version", or similar, in any language. Retrieves the latest stable versions of the Microsoft.AspNetCore.Components NuGet packages and the .NET SDK, updates the package references in the templates and the version of the template package itself, runs the test suite, then commits and tags the release. Finally, if a preview or RC branch (netNN) exists, merges master into it with no fast forward and resolves the conflicts.
 ---
 
 # Blazor Minimum Templates — New Version Release Procedure
@@ -8,7 +8,7 @@ description: Perform the new-version release work for the Blazor Minimum Templat
 This repository is the source of the NuGet package "Toolbelt.AspNetCore.Blazor.Minimum.Templates", a set of `dotnet new` project templates for Blazor.
 Whenever a new patch version of ASP.NET Core is released, a new version of this template package must be created with its referenced package versions updated. This document describes that entire procedure.
 
-> **Scope**: this skill handles **stable releases only**, and the work is done **on the `master` branch**. Make sure `master` is checked out before starting. If the user asks for a release targeting a **preview or RC version of .NET**, use the `release-new-preview-rc-version` skill instead — that work is done on a dedicated `netNN` branch.
+> **Scope**: this skill handles **stable releases only**, and the release work is done **on the `master` branch**. Make sure `master` is checked out before starting. The one exception is Step 5, where the finished release is merged into the preview / RC branch if such a branch exists. If the user asks for a release targeting a **preview or RC version of .NET**, use the `release-new-preview-rc-version` skill instead — that work is done on a dedicated `netNN` branch.
 
 ## Versioning rules (prerequisite knowledge)
 
@@ -129,7 +129,108 @@ Once all tests pass:
 
 **Do not run `git push` or publish to NuGet (`dotnet nuget push`).** The user performs those steps manually.
 
-## Step 5: Final report
+## Step 5: Merge `master` into the preview / RC branch
+
+If a preview / RC branch of a newer .NET major version exists, the stable release you just made must be carried over to it. Otherwise that branch keeps the old package references, and its next preview release ships stale versions.
+
+### 5-1. Check whether such a branch exists
+
+```
+git branch --list "net[0-9]*"
+```
+
+Branches like `net6`, `net7`, `net8`, `net9` and `net10` are old and already closed. The target of this step is only a branch whose major version is **newer than the stable .NET major version** you released for. For example, right after a .NET 10 stable release, the target is `net11` if it exists. If there is no such branch, skip this whole step.
+
+Make sure the working tree is clean before you start.
+
+### 5-2. Merge with no fast forward
+
+```
+git switch netNN
+git merge master --no-ff
+```
+
+Keep the default merge commit message, `Merge branch 'master' into netNN`. That is the convention used in the past history.
+
+### 5-3. Resolve the conflicts
+
+Four files conflict almost every time. The four template csproj files under `Content/` and `test/Blazor.Minimum.Templates.Test.csproj` merge on their own, because the `netNN.0` ItemGroup sits in a separate block from the stable ones. Do not hand edit them.
+
+| Conflicting file | How to resolve |
+|---|---|
+| `Version.props` | Keep the **branch side** (the preview / RC version, such as `11.0.100-preview.6`). `git checkout --ours Version.props` |
+| `test/VersionInfo.cs` | Keep the **branch side**, same as above. `git checkout --ours test/VersionInfo.cs` |
+| `README.md` | Keep the **branch side** for both install command examples. `git checkout --ours README.md` |
+| `RELEASE-NOTES.txt` | Keep **both sides**. See below. |
+
+> `--ours` means the branch you are on, which is `netNN`, and `--theirs` means `master`. This is the normal direction for `git merge`. Do not mix it up with the reversed meaning during a rebase.
+
+**How to resolve `RELEASE-NOTES.txt`**
+
+The conflict block looks like the following. The branch side holds all the preview entries, and the master side holds only the new stable entry.
+
+```
+<<<<<<< HEAD
+v.11.0.100-preview.6
+- Update: Updated the referenced packages to 11.0.0-preview.6
+
+  ... (older preview entries) ...
+
+v.11.0.100-preview.1
+- Update: Add support for .NET 11.0 preview.
+=======
+v.10.0.400
+- Update: Updated the referenced packages to 8.0.30, 9.0.19, and 10.0.11.
+>>>>>>> master
+
+v.10.0.302
+  ... (common history) ...
+```
+
+Keep both sides in this order. Delete the `<<<<<<< HEAD` line, replace the `=======` line with a single blank line, and delete the `>>>>>>> master` line. Nothing else changes. The preview entries stay on top, the new stable entry comes right under them, and the common history follows. Never delete either side, and never reorder the entries by version number. The order here is the order of release time, not of version number, so a `v.11.0.100-preview.6` entry sitting above a `v.10.0.400` entry is correct.
+
+### 5-4. Check the result before you commit the merge
+
+1. Look for leftover conflict markers.
+
+   ```
+   git diff --check
+   ```
+
+   Do not grep the whole repository for `<<<<<<<`, because the skill files under `.claude/skills/` contain that string as sample text and will give a false hit.
+
+2. Confirm that the merge did not overwrite the files that make the preview branch what it is. These must still hold the `netNN` values, not the values from `master`.
+
+   - `Toolbelt.AspNetCore.Blazor.Minimum.Templates.csproj`, the `<TargetFramework>` element (`net11.0`, not `net10.0`)
+   - `Version.props` and `test/VersionInfo.cs`, the preview / RC version
+   - The `netNN.0` ItemGroups in the four template csproj files, with their wildcard versions such as `11.0.0-preview.6.*`
+   - `Content/*/.template.config/template.json`, the framework choice list, which must still contain `netNN.0`
+   - `test/Internals/TargetFramework.cs`, which must still contain the `NetNN` constant
+   - `test/global.json`, if the branch has one
+
+   A quick way to see this is `git diff master -- <path>`. The differences that remain against `master` are exactly the preview support of the branch.
+
+3. Review the whole merge result with `git diff HEAD` (before the merge commit) or `git diff <branch tip before merge>`. The change coming from `master` should be limited to the stable package reference versions, the new `RELEASE-NOTES.txt` entry, and the test project packages. If anything else changed, you resolved something wrong.
+
+4. Verify that the package still builds and keeps the preview version.
+
+   ```
+   dotnet pack Toolbelt.AspNetCore.Blazor.Minimum.Templates.csproj -o ./_out_mergecheck
+   ```
+
+   The output file name must be `Toolbelt.AspNetCore.Blazor.Minimum.Templates.{preview version}.nupkg`. If the file name carries the stable version instead, `Version.props` was resolved the wrong way. Delete the `_out_mergecheck` folder after the check, and do not commit it. This build needs the preview / RC SDK installed on the machine. If `dotnet --list-sdks` does not list it, skip this check and say so in the final report.
+
+Then complete the merge commit.
+
+### 5-5. What this step does not do
+
+- Do **not** run the test suite on the preview branch here, and do **not** create a new version or a tag there. The merge only carries the stable update over. The next preview release is made later by the `release-new-preview-rc-version` skill, which starts from this merged state.
+- Do **not** run `git push`.
+- Switch back to `master` when the merge is done.
+
+If the conflicts do not look like the ones described above, or if the checks in 5-4 fail, stop and report it to the user instead of guessing.
+
+## Step 6: Final report
 
 Report the following to the user:
 
@@ -137,4 +238,5 @@ Report the following to the user:
 - The test project packages updated by `dotnet package update`
 - The test results (number of tests)
 - The commit and tag that were created
-- A reminder that pushing and publishing to NuGet are the user's manual steps
+- Whether a preview / RC branch was merged, the merge commit, and how each conflict was resolved. If no such branch exists, say that nothing was merged.
+- A reminder that pushing and publishing to NuGet are the user's manual steps. This includes the merge commit on the preview / RC branch.
