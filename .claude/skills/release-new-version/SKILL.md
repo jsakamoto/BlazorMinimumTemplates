@@ -194,10 +194,11 @@ Keep both sides in this order. Delete the `<<<<<<< HEAD` line, replace the `====
 1. Look for leftover conflict markers.
 
    ```
-   git diff --check
+   git diff --check -- . ':(exclude).claude/skills'
+   git diff --cached --check -- . ':(exclude).claude/skills'
    ```
 
-   Do not grep the whole repository for `<<<<<<<`, because the skill files under `.claude/skills/` contain that string as sample text and will give a false hit.
+   Both commands must print nothing. The `:(exclude)` part is needed. The skill files under `.claude/skills/` contain conflict markers as sample text, so a plain `git diff --check`, and a plain grep for `<<<<<<<` as well, will give a false hit there.
 
 2. Confirm that the merge did not overwrite the files that make the preview branch what it is. These must still hold the `netNN` values, not the values from `master`.
 
