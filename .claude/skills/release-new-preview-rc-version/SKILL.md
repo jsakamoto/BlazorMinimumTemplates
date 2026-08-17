@@ -1,6 +1,6 @@
 ---
 name: release-new-preview-rc-version
-description: Perform the new-version release work for the Blazor Minimum Templates NuGet package targeting a preview or release candidate (RC) version of .NET. Use when the user says "プレビューバージョンに対応した新バージョンを作成して", "RC バージョンに対応した新バージョンを作成して", "release a new preview version", "update to the new preview/RC", or similar. Finds the preview/RC .NET SDK, works on the dedicated "netNN" branch (merging master into it first if it is behind), updates the preview package references and the template package version, runs the test suite, then commits and tags the release on that branch.
+description: Perform the new-version release work for the Blazor Minimum Templates NuGet package targeting a preview or release candidate (RC) version of .NET. Use when the user says "create a new version for the preview version", "create a new version for the RC version", "release a new preview version", "update to the new preview/RC", or similar, in any language. Finds the preview/RC .NET SDK, works on the dedicated "netNN" branch (merging master into it first if it is behind), updates the preview package references and the template package version, runs the test suite, then commits and tags the release on that branch.
 ---
 
 # Blazor Minimum Templates — Preview / RC Version Release Procedure
