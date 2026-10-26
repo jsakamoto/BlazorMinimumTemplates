@@ -1,3 +1,6 @@
+v.11.0.100-rc.3
+- Update: Updated the referenced packages to 11.0.0-rc.3
+
 v.11.0.100-rc.2
 - Update: Updated the referenced packages to 11.0.0-rc.2
 
